@@ -19,7 +19,11 @@ import {
 } from 'lucide-react';
 import statss from "@/app/data/stats"
 import services from "@/app/data/services"
+import coursePreviews from "@/app/data/coursePreviews"
+import testimonials from "@/app/data/testimonials"
 import createIllustration from "@/components/createIllustration"
+import createAvatar from "@/components/createAvater"
+import {createTexture} from "@/components/createTexture"
 /**
  * ---------------------------------------------------------------
  * DESIGN SYSTEM — "Quiet Signal" (v2: imagery + motion pass)
@@ -39,82 +43,14 @@ const BRASS = '#B78A46';
 
 const navItems = ['Home', 'About', 'Courses', 'Services', 'Testimonials', 'Contact'];
 
-
-
-const trustedNames = ['NORTHPEAK', 'VERIDIAN', 'ARCLIGHT STUDIO', 'MERIDIAN & CO', 'STRATA LABS', 'HALCYON'];
-
-
-// Pure background texture (no label/line) used as a faint section backdrop
-const createTexture = (from: string, to: string) => `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
-  <defs>
-    <linearGradient id="tg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="${from}"/>
-      <stop offset="100%" stop-color="${to}"/>
-    </linearGradient>
-    <pattern id="tgrid" width="56" height="56" patternUnits="userSpaceOnUse">
-      <path d="M56 0H0V56" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
-    </pattern>
-  </defs>
-  <rect width="1200" height="800" fill="url(#tg)"/>
-  <rect width="1200" height="800" fill="url(#tgrid)"/>
-  <circle cx="1000" cy="120" r="260" fill="#ffffff" fill-opacity="0.05"/>
-</svg>`)}`;
-
-const createAvatar = (initials: string) => `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
-  <rect width="120" height="120" fill="#15181F"/>
-  <circle cx="60" cy="60" r="59" fill="none" stroke="${BRASS}" stroke-opacity="0.4" stroke-width="1"/>
-  <text x="60" y="70" fill="#FAF9F6" font-family="Georgia, serif" font-size="30" text-anchor="middle">${initials}</text>
-</svg>`)}`;
+const trustedNames = ['QueenFizzie', 'SolutionCrest', 'Maldini & Lounge', 'Castrol Lounge', 'Bokku Mart', 'Helium Enterprises', 'Strata Labs', 'BrightLabs', 'LumiTech', 'Vortex Solutions', 'NovaCore', 'AetherWorks', 'Zenith Dynamics', 'Lumina Systems', 'Nexus Innovations'];
 
 // Faint noise texture laid over the whole page for print-like depth
 const grainOverlay = `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(#n)'/></svg>`)}`;
 
 
 
-const coursePreviews = [
-  {
-    title: 'AI for Creators',
-    description: 'Master AI tools, automate workflows, and build standout content systems in a practical 4-week sprint.',
-    duration: '4 weeks',
-    outcome: 'Launch AI-assisted projects',
-    image: createIllustration('AI for Creators', '#181B22', '#2C2417'),
-  },
-  {
-    title: 'Frontend Launchpad',
-    description: 'Build modern web interfaces with React, Next.js, and polished UI systems that impress recruiters and clients.',
-    duration: '6 weeks',
-    outcome: 'Ship a portfolio-ready app',
-    image: createIllustration('Launchpad', '#161A21', '#252B36'),
-  },
-  {
-    title: 'Tech Team Accelerator',
-    description: 'Fast-track your team with hands-on training, live mentoring, and product-focused delivery practices.',
-    duration: 'Custom',
-    outcome: 'Upgrade team capability fast',
-    image: createIllustration('Accelerator', '#1A1D24', '#2E2A22'),
-  },
-];
 
-const testimonials = [
-  {
-    quote: 'TechWithLumi turned our team into confident builders. The training was practical, engaging, and future-focused.',
-    name: 'Aisha K.',
-    role: 'Growth Lead, BrightLabs',
-    image: createAvatar('AK'),
-  },
-  {
-    quote: 'I landed my first developer role after the bootcamp — the mentorship and portfolio guidance made all the difference.',
-    name: 'Jules M.',
-    role: 'Frontend Developer',
-    image: createAvatar('JM'),
-  },
-  {
-    quote: 'The AI Labs track paid for itself in the first month. Our workflows are faster and the team actually enjoys the tools now.',
-    name: 'Priya R.',
-    role: 'Ops Director, Strata Labs',
-    image: createAvatar('PR'),
-  },
-];
 
 const aboutImages = {
   main: createIllustration('The Studio', '#181B22', '#28303C'),
