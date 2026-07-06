@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --bg: #020617;
+  --text: #f8fafc;
+  --surface: rgba(15, 23, 42, 0.8);
+  --border: rgba(255, 255, 255, 0.1);
+}
+/* themes */
+html.light {
+  color-scheme: light;
+  --bg: #f8fafc;
+  --text: #0f172a;
+  --surface: rgba(255, 255, 255, 0.9);
+  --border: rgba(15, 23, 42, 0.1);
+}
+
+html.dark {
+  color-scheme: dark;
+  --bg: #020617;
+  --text: #f8fafc;
+  --surface: rgba(15, 23, 42, 0.8);
+  --border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  @apply antialiased;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+  @apply bg-violet-500/40 text-white;
+}
