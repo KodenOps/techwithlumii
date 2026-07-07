@@ -450,10 +450,10 @@ export default function LandingPage() {
           <div className="space-y-7">
             <p className="text-xs uppercase tracking-[0.28em]" style={{ color: BRASS, ...labelFont }}>About us</p>
             <h3 className="max-w-lg text-3xl leading-tight sm:text-4xl" style={{ ...displayFont, fontWeight: 500 }}>
-              We help founders, teams, and learners turn curiosity into real momentum.
+            We help you build skills, ship projects, and grow confidence to earn in a saturated market.
             </h3>
             <p className="max-w-lg text-lg leading-8" style={{ color: muted }}>
-              Our programs blend practical projects, expert mentorship, and modern tools so people leave with confidence, proof of work, and a clearer path forward.
+              Our team of experienced instructors and mentors are passionate about helping individuals and teams succeed in the fast-paced world of technology. We offer a range of services, from bootcamps to workshops, designed to provide practical skills and real-world experience.
             </p>
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -508,7 +508,7 @@ export default function LandingPage() {
               <h3 className="mt-4 text-3xl sm:text-4xl" style={{ ...displayFont, fontWeight: 500 }}>Services with real-world energy and clear outcomes.</h3>
             </div>
             <p className="max-w-md text-base leading-7" style={{ color: muted }}>
-              From team enablement to career-focused bootcamps, every offer is designed to feel practical, fast, and genuinely useful.
+              From bootcamps to workshops, we help teams and individuals build skills that stick, ship projects that matter, and grow confidence in their work.
             </p>
           </div>
           <motion.div
