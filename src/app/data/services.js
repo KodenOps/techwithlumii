@@ -6,24 +6,24 @@ import {
 } from 'lucide-react';
 const services = [
   {
-    title: 'Product Design Sprints',
-    description: 'Rapid coaching for founders and teams shipping polished digital experiences.',
+    title: 'Training & Workshops',
+    description: 'Hands-on sessions that turn teams into confident builders, with practical skills and future-focused strategies.',
     image: createIllustration('Design', '#1B1E27', '#33384A'),
-    bullets: ['UI systems', 'Figma workflows', 'Launch-ready prototypes'],
+    bullets: ['One-on-One Sessions', 'Team Workshops', 'Virtual & In-Person'],
     icon: Sparkles,
   },
   {
-    title: 'AI & Automation Labs',
-    description: 'Hands-on sessions that turn AI tools into everyday workflows and superpowers.',
-    image: createIllustration('AI Labs', '#171B22', '#28303C'),
-    bullets: ['Prompt design', 'Automation playbooks', 'Real-world demos'],
+    title: 'Web Development',
+    description: 'We help Small and Medium Businesses build robust web applications with modern technologies to reach their business goals.',
+    image: createIllustration('Web Dev', '#171B22', '#28303C'),
+    bullets: ['Landing Pages', 'Web Applications', 'E-commerce Solutions'],
     icon: Cpu,
   },
   {
-    title: 'Founder Bootcamps',
-    description: 'Mentor-led, practical training for ambitious builders who want momentum fast.',
+    title: 'Consulting & Mentorship',
+    description: 'Guidance for teams and individuals to navigate the tech landscape, improve workflows, and achieve their objectives.',
     image: createIllustration('Bootcamp', '#20232B', '#3A3220'),
-    bullets: ['Portfolio projects', 'Career coaching', 'Community support'],
+    bullets: ['Technical Mentorship', 'Portfolio Reviews', 'Career Guidance'],
     icon: Rocket,
   },
 ];

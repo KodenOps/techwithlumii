@@ -24,6 +24,11 @@ import testimonials from "@/app/data/testimonials"
 import createIllustration from "@/components/createIllustration"
 import createAvatar from "@/components/createAvater"
 import {createTexture} from "@/components/createTexture"
+import TrustedByStrip from "@/components/TrustedByStrip"
+import SectionMark from '@/components/SectionMark';
+import LineIllustration from '@/components/LineIllustration';
+import Image1 from '@/assets/image1.png'
+import Image from 'next/image';
 /**
  * ---------------------------------------------------------------
  * DESIGN SYSTEM — "Quiet Signal" (v2: imagery + motion pass)
@@ -40,28 +45,19 @@ import {createTexture} from "@/components/createTexture"
  */
 
 const BRASS = '#B78A46';
-
+// Navigation Links - 
 const navItems = ['Home', 'About', 'Courses', 'Services', 'Testimonials', 'Contact'];
-
-const trustedNames = ['QueenFizzie', 'SolutionCrest', 'Maldini & Lounge', 'Castrol Lounge', 'Bokku Mart', 'Helium Enterprises', 'Strata Labs', 'BrightLabs', 'LumiTech', 'Vortex Solutions', 'NovaCore', 'AetherWorks', 'Zenith Dynamics', 'Lumina Systems', 'Nexus Innovations'];
 
 // Faint noise texture laid over the whole page for print-like depth
 const grainOverlay = `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(#n)'/></svg>`)}`;
-
-
-
-
 
 const aboutImages = {
   main: createIllustration('The Studio', '#181B22', '#28303C'),
   accentA: createIllustration('Team Culture', '#20232B', '#2E2A22'),
   accentB: createIllustration('Workshop', '#171B22', '#243044'),
 };
-
 const heroDetailImage = createIllustration('Mentorship', '#20232B', '#2E2A22');
-
 const fallbackImage = createIllustration('TechWithLumi', '#1B1E27', '#2C2417');
-
 const containerVariants = {
   hidden: {},
   show: { transition: { staggerChildren: 0.12 } },
@@ -71,27 +67,7 @@ const itemVariants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: 'easeOut' } },
 };
 
-function SectionMark({ color }: { color: string }) {
-  return (
-    <div className="mx-auto flex items-center justify-center gap-3 py-2" aria-hidden="true">
-      <span className="h-px w-16" style={{ background: color, opacity: 0.35 }} />
-      <span className="h-1.5 w-1.5 rotate-45" style={{ background: BRASS }} />
-      <span className="h-px w-16" style={{ background: color, opacity: 0.35 }} />
-    </div>
-  );
-}
 
-function LineIllustration({ className, accent = BRASS }: { className?: string; accent?: string }) {
-  return (
-    <svg viewBox="0 0 220 120" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="8" y="8" width="204" height="104" rx="18" stroke={accent} strokeOpacity="0.35" strokeWidth="1" />
-      <path d="M40 84C68 52 94 50 116 72C140 96 168 92 180 58" stroke={accent} strokeWidth="2" strokeLinecap="round" />
-      <circle cx="40" cy="84" r="5" fill={accent} />
-      <circle cx="180" cy="58" r="5" fill={accent} />
-      <path d="M48 24H172" stroke="currentColor" strokeOpacity="0.45" strokeWidth="1" strokeLinecap="round" />
-    </svg>
-  );
-}
 
 function CountUp({ value, suffix = '', decimals = 0 }: { value: number; suffix?: string; decimals?: number }) {
   const ref = useRef<HTMLSpanElement>(null);
@@ -140,30 +116,7 @@ function CountUp({ value, suffix = '', decimals = 0 }: { value: number; suffix?:
   );
 }
 
-function TrustedByStrip({ line, mutedSoft, labelFont }: { line: string; mutedSoft: string; labelFont: { fontFamily: string } }) {
-  const items = [...trustedNames, ...trustedNames];
-  return (
-    <div className="py-10">
-      <p className="mb-6 text-center text-[11px] uppercase tracking-[0.28em]" style={{ color: mutedSoft, ...labelFont }}>
-        Trusted by teams at
-      </p>
-      <div className="overflow-hidden" style={{ maskImage: 'linear-gradient(90deg, transparent, black 12%, black 88%, transparent)' }}>
-        <div className="trusted-track flex w-max items-center gap-16">
-          {items.map((n, i) => (
-            <span
-              key={`${n}-${i}`}
-              className="whitespace-nowrap text-lg font-medium tracking-wide grayscale"
-              style={{ color: mutedSoft, fontFamily: "'Fraunces', Georgia, serif" }}
-            >
-              {n}
-            </span>
-          ))}
-        </div>
-      </div>
-      <SectionMark color={line} />
-    </div>
-  );
-}
+
 
 
 export default function LandingPage() {
@@ -268,7 +221,8 @@ export default function LandingPage() {
           style={{ borderColor: line, background: isDark ? 'rgba(11,13,18,0.82)' : 'rgba(250,249,246,0.86)' }}
         >
           <div className="flex items-baseline gap-2">
-            <h1 className="text-xl" style={{ ...displayFont, fontStyle: 'italic' }}>TechWithLumi</h1>
+            {/* LOGO */}
+            <h1 className="text-xl" style={{ ...displayFont, fontStyle: 'italic' }}>RubyTech</h1>
             <span className="hidden text-[11px] uppercase tracking-[0.24em] sm:inline" style={{ color: mutedSoft, ...labelFont }}>
               Est. 2024
             </span>
@@ -463,8 +417,9 @@ export default function LandingPage() {
               className="overflow-hidden rounded-2xl"
               style={{ border: `1px solid ${line}` }}
             >
-              <img
-                src={aboutImages.main}
+              <Image
+                // src={aboutImages.main}
+                src={Image1}
                 alt="A collaborative team working around a laptop"
                 onError={handleImageError}
                 className="h-80 w-full object-cover"
@@ -478,7 +433,7 @@ export default function LandingPage() {
               className="gentle-float absolute -bottom-8 -left-6 hidden h-32 w-44 overflow-hidden rounded-xl sm:block"
               style={{ border: `1px solid ${line}`, boxShadow: isDark ? '0 20px 40px -20px rgba(0,0,0,0.6)' : '0 20px 40px -20px rgba(20,23,31,0.3)' }}
             >
-              <img src={aboutImages.accentA} alt="Team culture moment" onError={handleImageError} className="h-full w-full object-cover" />
+              <img src={aboutImages.accentB} alt="Team culture moment" onError={handleImageError} className="h-full w-full object-cover" />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -691,7 +646,7 @@ export default function LandingPage() {
                   &ldquo;{item.quote}&rdquo;
                 </p>
                 <div className="mt-7 flex items-center gap-3.5">
-                  <img src={item.image} alt={item.name} className="h-11 w-11 rounded-full object-cover" />
+                  <Image src={item.image} alt={item.name} className="h-11 w-11 rounded-full object-cover" />
                   <div>
                     <p className="text-sm font-semibold">{item.name}</p>
                     <p className="text-xs uppercase tracking-wide" style={{ color: mutedSoft, ...labelFont }}>{item.role}</p>

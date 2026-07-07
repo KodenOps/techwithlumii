@@ -2,26 +2,27 @@ import createIllustration from "@/components/createIllustration"
 
 const coursePreviews = [
   {
-    title: 'AI for Creators',
-    description: 'Master AI tools, automate workflows, and build standout content systems in a practical 4-week sprint.',
-    duration: '4 weeks',
-    outcome: 'Launch AI-assisted projects',
+    title: 'Website Development Bootcamp - HTML, CSS, JS, AI',
+    description: 'Learn to build modern web applications with React, Next.js, and polished UI systems that impress recruiters and clients.',
+    duration: '8 weeks',
+    outcome: 'Ship 6 portfolio-ready web apps',
     image: createIllustration('AI for Creators', '#181B22', '#2C2417'),
   },
   {
-    title: 'Frontend Launchpad',
-    description: 'Build modern web interfaces with React, Next.js, and polished UI systems that impress recruiters and clients.',
-    duration: '6 weeks',
-    outcome: 'Ship a portfolio-ready app',
+    title: 'DevOps Beginner Bootcamp - CI/CD, Cloud, Docker, Linux',
+    description: 'Master the fundamentals of DevOps, including CI/CD pipelines, cloud infrastructure, Docker containerization, and Linux administration.',
+    duration: '8 weeks',
+    outcome: 'Deploy, monitor, Scale',
     image: createIllustration('Launchpad', '#161A21', '#252B36'),
   },
   {
-    title: 'Tech Team Accelerator',
-    description: 'Fast-track your team with hands-on training, live mentoring, and product-focused delivery practices.',
-    duration: 'Custom',
-    outcome: 'Upgrade team capability fast',
+    title: 'Excel and Data Analysis Bootcamp - Excel, SQL, Power BI',
+    description: 'Gain practical skills in data analysis using Excel, SQL, and Power BI to make data-driven decisions and create impactful visualizations.',
+    duration: '8 weeks',
+    outcome: 'Use data to drive decisions',
     image: createIllustration('Accelerator', '#1A1D24', '#2E2A22'),
   },
+  
 ];
 
 export default coursePreviews
