@@ -285,7 +285,7 @@ export default function LandingPage() {
         ) : null}
 
         {/* HERO */}
-        <section id="home" ref={heroRef} className="grid gap-14 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:py-24">
+        <section id="home" ref={heroRef} className="grid gap-14 pt-4 pb-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:py-24">
           <div className="space-y-9">
             <motion.p
               initial={{ opacity: 0, y: 10 }}
