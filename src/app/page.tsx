@@ -626,7 +626,7 @@ export default function LandingPage() {
         <section id="testimonials" className="space-y-12 py-16 lg:py-20">
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-xs uppercase tracking-[0.28em]" style={{ color: BRASS, ...labelFont }}>Testimonials</p>
-            <h3 className="mt-4 text-3xl sm:text-4xl" style={{ ...displayFont, fontWeight: 500 }}>Learners and leaders share what changed.</h3>
+            <h3 className="mt-4 text-3xl sm:text-4xl" style={{ ...displayFont, fontWeight: 500 }}>Our Work speaks for itself.</h3>
           </div>
           <motion.div
             variants={containerVariants}
@@ -731,7 +731,7 @@ export default function LandingPage() {
         <footer className="mt-4 border-t py-8" style={{ borderColor: line, color: mutedSoft }}>
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <p className="text-base" style={{ ...displayFont, fontStyle: 'italic' }}>TechWithLumi</p>
+              <p className="text-base" style={{ ...displayFont, fontStyle: 'italic' }}>Rubytech</p>
               <p className="mt-1 text-sm">Modern tech training with real-world outcomes.</p>
             </div>
             <div className="flex flex-wrap gap-6 text-sm font-medium">
@@ -740,7 +740,7 @@ export default function LandingPage() {
               <a href="#contact" className="transition hover:opacity-70">Contact</a>
             </div>
           </div>
-          <p className="mt-6 text-xs uppercase tracking-wide" style={{ ...labelFont }}>© 2026 TechWithLumi. Crafted for builders, teams, and future-focused learners.</p>
+          <p className="mt-6 text-xs uppercase tracking-wide" style={{ ...labelFont }}>© 2026 Rubytech. Crafted for builders, teams, and future-focused learners.</p>
         </footer>
       </div>
     </main>
