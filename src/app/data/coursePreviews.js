@@ -7,6 +7,7 @@ const coursePreviews = [
     duration: '8 weeks',
     outcome: 'Ship 6 portfolio-ready web apps',
     image: createIllustration('AI for Creators', '#181B22', '#2C2417'),
+    url: "/courses/website-development-bootcamp"
   },
   {
     title: 'DevOps Beginner Bootcamp - CI/CD, Cloud, Docker, Linux',
@@ -14,6 +15,7 @@ const coursePreviews = [
     duration: '8 weeks',
     outcome: 'Deploy, monitor, Scale',
     image: createIllustration('Launchpad', '#161A21', '#252B36'),
+    url: "/courses/devops-beginner-bootcamp"
   },
   {
     title: 'Excel and Data Analysis Bootcamp - Excel, SQL, Power BI',
@@ -21,6 +23,7 @@ const coursePreviews = [
     duration: '8 weeks',
     outcome: 'Use data to drive decisions',
     image: createIllustration('Accelerator', '#1A1D24', '#2E2A22'),
+    url: "/courses/excel-data-analysis-bootcamp"
   },
   
 ];

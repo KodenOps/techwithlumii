@@ -640,7 +640,7 @@ export default function LandingPage() {
                       <span className="font-medium">{course.outcome}</span>
                     </div>
                   </div>
-                  <a href="#contact" className="mt-7 inline-flex items-center gap-2 text-sm font-semibold transition hover:gap-3" style={{ color: BRASS }}>
+                  <a href={course.url} className="mt-7 inline-flex items-center gap-2 text-sm font-semibold transition hover:gap-3" style={{ color: BRASS }}>
                     Preview course
                     <ArrowRight className="h-4 w-4" />
                   </a>
