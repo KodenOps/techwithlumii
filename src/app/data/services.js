@@ -26,13 +26,13 @@ const services = [
     bullets: ['Technical Mentorship', 'Portfolio Reviews', 'Career Guidance'],
     icon: Sparkles,
   },
-    {
-    title: 'Human Resourcing & Outsourcing',
-    description: 'We provide expert HR solutions and outsourcing services especially in the tech industry to help businesses manage their workforce effectively and efficiently.',
-    image: createIllustration('Bootcamp', '#20232B', '#2e4642'),
-    bullets: ['International & Local Recruitment', 'Employee Management', 'Outsourcing Solutions', "CV Screening & Interviewing"],
-    icon: Sparkles,
-  },
+  //   {
+  //   title: 'Human Resourcing & Outsourcing',
+  //   description: 'We provide expert HR solutions and outsourcing services especially in the tech industry to help businesses manage their workforce effectively and efficiently.',
+  //   image: createIllustration('Bootcamp', '#20232B', '#2e4642'),
+  //   bullets: ['International & Local Recruitment', 'Employee Management', 'Outsourcing Solutions', "CV Screening & Interviewing"],
+  //   icon: Sparkles,
+  // },
 ];
 
 export default services;
