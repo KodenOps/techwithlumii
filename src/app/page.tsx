@@ -122,6 +122,9 @@ function CountUp({ value, suffix = '', decimals = 0 }: { value: number; suffix?:
 export default function LandingPage() {
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [submitState, setSubmitState] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [submitMessage, setSubmitMessage] = useState('');
   const heroRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -157,6 +160,33 @@ export default function LandingPage() {
   const isDark = theme === 'dark';
   const handleImageError = (event: SyntheticEvent<HTMLImageElement>) => {
     event.currentTarget.src = fallbackImage;
+  };
+
+  const handleSubmit = async (event: SyntheticEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setSubmitState('loading');
+    setSubmitMessage('');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Unable to send your message right now.');
+      }
+
+      setSubmitState('success');
+      setSubmitMessage('Thanks! Your message has been sent.');
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      setSubmitState('error');
+      setSubmitMessage(error instanceof Error ? error.message : 'Unable to send your message right now.');
+    }
   };
 
   const bg = isDark ? '#0B0D12' : '#FAF9F6';
@@ -685,6 +715,7 @@ export default function LandingPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.6 }}
+              onSubmit={handleSubmit}
               className="space-y-4 rounded-2xl p-7"
               style={{ background: '#15181F', border: '1px solid rgba(245,243,238,0.08)' }}
             >
@@ -692,37 +723,55 @@ export default function LandingPage() {
                 Full name
                 <input
                   type="text"
+                  value={formData.name}
+                  onChange={(event) => setFormData((current) => ({ ...current, name: event.target.value }))}
                   placeholder="Jane Doe"
                   className="mt-2.5 w-full rounded-lg bg-transparent px-3.5 py-3 text-sm text-white outline-none transition placeholder:text-white/30 focus:border-[#B78A46]"
                   style={{ border: '1px solid rgba(245,243,238,0.14)' }}
+                  required
                 />
               </label>
               <label className="block text-xs font-medium uppercase tracking-wide" style={{ color: 'rgba(245,243,238,0.7)' }}>
                 Email address
                 <input
                   type="email"
+                  value={formData.email}
+                  onChange={(event) => setFormData((current) => ({ ...current, email: event.target.value }))}
                   placeholder="hello@company.com"
                   className="mt-2.5 w-full rounded-lg bg-transparent px-3.5 py-3 text-sm text-white outline-none transition placeholder:text-white/30 focus:border-[#B78A46]"
                   style={{ border: '1px solid rgba(245,243,238,0.14)' }}
+                  required
                 />
               </label>
               <label className="block text-xs font-medium uppercase tracking-wide" style={{ color: 'rgba(245,243,238,0.7)' }}>
                 What are you looking for?
                 <textarea
                   rows={4}
+                  value={formData.message}
+                  onChange={(event) => setFormData((current) => ({ ...current, message: event.target.value }))}
                   placeholder="Bootcamp, corporate training, project support..."
                   className="mt-2.5 w-full rounded-lg bg-transparent px-3.5 py-3 text-sm text-white outline-none transition placeholder:text-white/30 focus:border-[#B78A46]"
                   style={{ border: '1px solid rgba(245,243,238,0.14)' }}
+                  required
                 />
               </label>
               <button
                 type="submit"
-                className="inline-flex w-full items-center justify-center gap-2 rounded-lg px-6 py-3.5 text-sm font-semibold transition hover:opacity-90"
+                disabled={submitState === 'loading'}
+                className="inline-flex w-full items-center justify-center gap-2 rounded-lg px-6 py-3.5 text-sm font-semibold transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-70"
                 style={{ background: '#FAF9F6', color: '#0B0D12' }}
               >
-                Send inquiry
+                {submitState === 'loading' ? 'Sending...' : 'Send inquiry'}
                 <Mail className="h-4 w-4" />
               </button>
+              {submitMessage ? (
+                <p
+                  className="text-sm"
+                  style={{ color: submitState === 'error' ? '#F5A3A3' : '#CDECCB' }}
+                >
+                  {submitMessage}
+                </p>
+              ) : null}
             </motion.form>
           </div>
         </section>
