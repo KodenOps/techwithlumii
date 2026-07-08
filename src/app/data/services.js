@@ -15,16 +15,23 @@ const services = [
   {
     title: 'Web Development',
     description: 'We help Small and Medium Businesses build robust web applications with modern technologies to reach their business goals.',
-    image: createIllustration('Web Dev', '#171B22', '#28303C'),
+    image: createIllustration('Design', '#4a6799', '#41421f'),
     bullets: ['Landing Pages', 'Web Applications', 'E-commerce Solutions'],
-    icon: Cpu,
+    icon: Sparkles,
   },
   {
     title: 'Consulting & Mentorship',
     description: 'Guidance for teams and individuals to navigate the tech landscape, improve workflows, and achieve their objectives.',
-    image: createIllustration('Bootcamp', '#20232B', '#3A3220'),
+    image: createIllustration('Bootcamp', '#20232B', '#3a2035'),
     bullets: ['Technical Mentorship', 'Portfolio Reviews', 'Career Guidance'],
-    icon: Rocket,
+    icon: Sparkles,
+  },
+    {
+    title: 'Human Resourcing & Outsourcing',
+    description: 'We provide expert HR solutions and outsourcing services especially in the tech industry to help businesses manage their workforce effectively and efficiently.',
+    image: createIllustration('Bootcamp', '#20232B', '#2e4642'),
+    bullets: ['International & Local Recruitment', 'Employee Management', 'Outsourcing Solutions', "CV Screening & Interviewing"],
+    icon: Sparkles,
   },
 ];
 

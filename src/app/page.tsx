@@ -674,10 +674,10 @@ export default function LandingPage() {
             <div className="space-y-5">
               <p className="text-xs uppercase tracking-[0.28em]" style={{ color: BRASS, ...labelFont }}>Contact us</p>
               <h3 className="max-w-md text-3xl leading-tight text-white sm:text-4xl" style={{ ...displayFont, fontWeight: 500 }}>
-                Ready to launch your next cohort or upgrade your team?
+                Ready to take your career in Technology to the next stage? 
               </h3>
               <p className="max-w-md text-base leading-7" style={{ color: 'rgba(245,243,238,0.62)' }}>
-                Tell us what you want to build and we&rsquo;ll shape a program around your goals, timeline, and style.
+               You are one step away from starting your journey with Rubytech. Fill out the form and we will get back to you as soon as possible.
               </p>
             </div>
             <motion.form
