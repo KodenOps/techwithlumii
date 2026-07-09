@@ -254,7 +254,7 @@ export default function LandingPage() {
             {/* LOGO */}
             <h1 className="text-xl" style={{ ...displayFont, fontStyle: 'italic' }}>RubyTech</h1>
             <span className="hidden text-[11px] uppercase tracking-[0.24em] sm:inline" style={{ color: mutedSoft, ...labelFont }}>
-              Est. 2024
+              RC - 
             </span>
           </div>
 

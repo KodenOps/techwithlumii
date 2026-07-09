@@ -205,7 +205,11 @@ margin:0;
 font-size:13px;
 color:#9ca3af;
 ">
-Submitted on ${new Date().toLocaleString()}
+Submitted on ${new Date().toLocaleString("en-NG", {
+  timeZone: "Africa/Lagos",
+  dateStyle: "full",
+  timeStyle: "medium",
+})}
 </p>
 
 <p
