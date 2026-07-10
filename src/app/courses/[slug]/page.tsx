@@ -204,10 +204,10 @@ export default function CoursePage({ params }: CoursePageProps) {
             className="relative overflow-hidden rounded-2xl"
             style={{ border: `1px solid ${line}` }}
           >
-            <img
+            <Image
               src={course.heroImage}
               alt={course.title}
-              className="h-96 w-full object-cover"
+              className="h-96 w-full object-fit"
             />
           </motion.div>
         </motion.section>

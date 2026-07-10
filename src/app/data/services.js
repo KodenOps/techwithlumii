@@ -9,14 +9,14 @@ const services = [
     title: 'Training & Workshops',
     description: 'Hands-on sessions that turn teams into confident builders, with practical skills and future-focused strategies.',
     image: createIllustration('Design', '#1B1E27', '#33384A'),
-    bullets: ['One-on-One Sessions', 'Team Workshops', 'Virtual & In-Person'],
+    bullets: ['One-on-One Sessions', 'Team Workshops', 'Bootcamp Programs', 'Portfolio Reviews'],
     icon: Sparkles,
   },
-  {
-    title: 'Web Development',
-    description: 'We help Small and Medium Businesses build robust web applications with modern technologies to reach their business goals.',
-    image: createIllustration('Design', '#4a6799', '#41421f'),
-    bullets: ['Landing Pages', 'Web Applications', 'E-commerce Solutions'],
+      {
+    title: 'Bespoke Business Solutions',
+    description: 'We provide tailored solutions to meet the unique needs of businesses, helping them streamline operations, enhance productivity, and achieve their goals.',
+    image: createIllustration('Bootcamp', '#20232B', '#2e4642'),
+    bullets: ['Workflow Automations', 'Website Development', 'Inventory Management Solutions', 'Business Process Optimization'],
     icon: Sparkles,
   },
       {

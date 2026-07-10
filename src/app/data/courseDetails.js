@@ -1,6 +1,8 @@
 import createIllustration from "@/components/createIllustration"
 import { Code, Database, Cloud, Zap, Users, Award, Briefcase, TrendingUp } from 'lucide-react';
-
+import devops from "@/assets/devops.png"
+import webdev from "@/assets/webdev.png"
+import excel from "@/assets/excel.png"
 const courseDetails = [
   {
     id: 'web-dev-bootcamp',
@@ -8,7 +10,8 @@ const courseDetails = [
     title: 'Website Development Bootcamp',
     subtitle: 'HTML, CSS, JavaScript, React & Next.js',
     description: 'Learn to build modern, responsive web applications that impress recruiters and clients. Master frontend frameworks, API integration, and deployment.',
-    heroImage: createIllustration('Web Development', '#181B22', '#2C2417'),
+    // heroImage: createIllustration('Web Development', '#181B22', '#2C2417'),
+    heroImage: webdev,
     shortImage: createIllustration('Web Dev', '#1B1E27', '#33384A'),
     
     duration: '8 weeks',
@@ -16,8 +19,8 @@ const courseDetails = [
     level: 'Beginner to Intermediate',
     
     price: 80000,
-    originalPrice: 100000,
-    discount: 50,
+    originalPrice: 95000,
+    discount: 47,
     currency: 'NGN',
     paymentOptions: ['Full payment'],
     
@@ -181,7 +184,8 @@ const courseDetails = [
     title: 'DevOps Beginner Bootcamp',
     subtitle: 'CI/CD, Cloud, Docker & Linux',
     description: 'Master the fundamentals of DevOps. Learn to deploy, manage, and scale applications with modern infrastructure tools.',
-    heroImage: createIllustration('DevOps', '#161A21', '#252B36'),
+    // heroImage: createIllustration('DevOps', '#161A21', '#252B36'),
+    heroImage: devops,
     shortImage: createIllustration('Cloud', '#1B1E27', '#33384A'),
     
     duration: '8 weeks',
@@ -354,7 +358,8 @@ const courseDetails = [
     title: 'Excel & Data Analysis Bootcamp',
     subtitle: 'Excel, SQL, Power BI & Analytics',
     description: 'Transform raw data into actionable insights. Master Excel, SQL queries, and create stunning dashboards with Power BI.',
-    heroImage: createIllustration('Data Analysis', '#1A1D24', '#2E2A22'),
+    // heroImage: createIllustration('Data Analysis', '#1A1D24', '#2E2A22'),
+    heroImage: excel,
     shortImage: createIllustration('Analytics', '#1B1E27', '#33384A'),
     
     duration: '5 weeks',

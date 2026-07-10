@@ -254,7 +254,7 @@ export default function LandingPage() {
             {/* LOGO */}
             <h1 className="text-xl" style={{ ...displayFont, fontStyle: 'italic' }}>RubyTech</h1>
             <span className="hidden text-[11px] uppercase tracking-[0.24em] sm:inline" style={{ color: mutedSoft, ...labelFont }}>
-              RC - 
+              RC-9666355
             </span>
           </div>
 
@@ -388,9 +388,10 @@ export default function LandingPage() {
             className="relative overflow-hidden rounded-2xl"
             style={{ border: `1px solid ${line}`, boxShadow: isDark ? '0 30px 60px -30px rgba(0,0,0,0.6)' : '0 30px 60px -30px rgba(20,23,31,0.25)' }}
           >
-            <motion.img
-              style={{ y: heroImageY }}
-              src={createIllustration('Live Cohort', '#1B1E27', '#2E2A22')}
+            <Image
+              // style={{ y: heroImageY }}
+              src={Image1}
+              // src={createIllustration('Live Cohort', '#1B1E27', '#2E2A22')}
               alt="Students collaborating in a tech training workshop"
               onError={handleImageError}
               className="h-96 w-full scale-110 object-cover"
@@ -423,12 +424,12 @@ export default function LandingPage() {
               className="absolute inset-x-4 bottom-4 flex items-center gap-3 rounded-xl px-4 py-3.5 backdrop-blur-md"
               style={{ background: isDark ? 'rgba(11,13,18,0.68)' : 'rgba(255,255,255,0.82)', border: `1px solid ${line}` }}
             >
-              <div className="flex h-9 w-9 items-center justify-center rounded-full" style={{ border: `1px solid ${BRASS}` }}>
+              <div className="flex h-10 w-14 hidden md:block items-center justify-center rounded-full" style={{ border: `1px solid ${BRASS}` }}>
                 <Users className="h-4 w-4" style={{ color: BRASS }} />
               </div>
               <div>
-                <p className="text-[10px] uppercase tracking-[0.2em]" style={{ color: mutedSoft, ...labelFont }}>Featured program</p>
-                <p className="text-sm font-medium" style={{ color: text }}>Live cohort · Hands-on delivery</p>
+                <p className="text-[10px] uppercase tracking-[0.2em] mb-2" style={{ color: mutedSoft, ...labelFont }}>Featured program</p>
+                <p className="text-sm font-medium" style={{ color: text }}>Breaking Into Tech Bootcamp V2 (Website Development, Devops and Data Analysis cohorts)</p>
               </div>
             </div>
           </motion.div>
@@ -538,7 +539,7 @@ export default function LandingPage() {
               <h3 className="mt-4 text-3xl sm:text-4xl" style={{ ...displayFont, fontWeight: 500 }}>Services with real-world energy and clear outcomes.</h3>
             </div>
             <p className="max-w-md text-base leading-7" style={{ color: muted }}>
-              From bootcamps to workshops, we help teams and individuals build skills that stick, ship projects that matter, and grow confidence in their work.
+              We help you achieve your goals with a range of services designed to provide practical skills and real-world experience. From bootcamps to workshops, we offer tailored learning pathways for individuals and teams.
             </p>
           </div>
           <motion.div
@@ -592,7 +593,7 @@ export default function LandingPage() {
         {/* COURSES */}
         <section id="courses" className="space-y-12 py-16 lg:py-20">
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-xs uppercase tracking-[0.28em]" style={{ color: BRASS, ...labelFont }}>Course preview</p>
+            <p className="text-xs uppercase tracking-[0.28em]" style={{ color: BRASS, ...labelFont }}>Break Into Tech Bootcamp v2</p>
             <h3 className="mt-4 text-3xl sm:text-4xl" style={{ ...displayFont, fontWeight: 500 }}>High-impact programs built for fast-moving learners.</h3>
           </div>
           <motion.div
@@ -813,8 +814,8 @@ export default function LandingPage() {
         <footer className="mt-4 border-t py-8" style={{ borderColor: line, color: mutedSoft }}>
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <p className="text-base" style={{ ...displayFont, fontStyle: 'italic' }}>Rubytech</p>
-              <p className="mt-1 text-sm">Modern tech training with real-world outcomes.</p>
+              <p className="text-base" style={{ ...displayFont, fontStyle: 'italic' }}>Rubytech Consulting And Outsourcing Enterprise.</p>
+              <p className="mt-1 text-sm">A value driven agency built on innovation and excellence.</p>
             </div>
             <div className="flex flex-wrap gap-6 text-sm font-medium">
               <a href="#home" className="transition hover:opacity-70">Home</a>
@@ -822,7 +823,7 @@ export default function LandingPage() {
               <a href="#contact" className="transition hover:opacity-70">Contact</a>
             </div>
           </div>
-          <p className="mt-6 text-xs uppercase tracking-wide" style={{ ...labelFont }}>© 2026 Rubytech. Crafted for builders, teams, and future-focused learners.</p>
+          <p className="mt-6 text-xs uppercase tracking-wide" style={{ ...labelFont }}>© 2026 Crafted for SMEs, startups, and future-focused learners.</p>
         </footer>
       </div>
     </main>

@@ -22,9 +22,9 @@ const testimonials = [
     image: Avatar2,
   },
   {
-    quote: "Was Skeptical to outsource our even sourvenir to them. But they delivered beyond expectations. From the designs to the packagings, they surely knows more than their onions",
+    quote: "Was Skeptical to outsource our event sourvenir to them. But they delivered beyond expectations. From the designs to the packagings, they surely knows more than their onions",
     name: 'Ogunbekun F.',
-    role: 'Owner, Harmony Events',
+    role: 'CEO, Harmony Events',
     image: Avatar3,
   },
 
