@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import './global.css';
 
 export const metadata: Metadata = {
-  title: 'TechWithLumi | Future-ready tech training',
-  description: 'Modern tech training agency helping ambitious learners build in-demand digital skills...',
+  title: 'RubyTech | A future-forward Agency',
+  description: 'Bridging the gap between innovation and implementation...',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

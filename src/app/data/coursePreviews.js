@@ -5,8 +5,8 @@ const coursePreviews = [
     title: 'Website Development Bootcamp - HTML, CSS, JS, AI',
     description: 'Learn to build modern web applications with React, Next.js, and polished UI systems that impress recruiters and clients.',
     duration: '8 weeks',
-    outcome: 'Ship 6 portfolio-ready web apps',
-    image: createIllustration('AI for Creators', '#181B22', '#2C2417'),
+    outcome: '+4 portfolio-ready Projects',
+    image: createIllustration('Launchpad', '#161A21', '#252B36'),
     url: "/courses/website-development-bootcamp"
   },
   {
@@ -14,7 +14,7 @@ const coursePreviews = [
     description: 'Master the fundamentals of DevOps, including CI/CD pipelines, cloud infrastructure, Docker containerization, and Linux administration.',
     duration: '8 weeks',
     outcome: 'Deploy, monitor, Scale',
-    image: createIllustration('Launchpad', '#161A21', '#252B36'),
+    image: createIllustration('Launchpad', '#679875', '#252B36'),
     url: "/courses/devops-beginner-bootcamp"
   },
   {

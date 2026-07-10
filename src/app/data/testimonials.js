@@ -21,6 +21,12 @@ const testimonials = [
     role: 'Freelance AI Data Analyst',
     image: Avatar2,
   },
+  {
+    quote: "Was Skeptical to outsource our even sourvenir to them. But they delivered beyond expectations. From the designs to the packagings, they surely knows more than their onions",
+    name: 'Ogunbekun F.',
+    role: 'Owner, Harmony Events',
+    image: Avatar3,
+  },
 
 ];
 export default testimonials;

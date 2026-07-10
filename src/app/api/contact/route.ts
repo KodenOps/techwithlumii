@@ -5,9 +5,9 @@ export const runtime = 'nodejs';
 
 export async function POST(request: Request) {
   try {
-    const { name, email, message } = await request.json();
+    const { name, email,reason,  message } = await request.json();
 
-    if (!name || !email || !message) {
+    if (!name || !email || !reason || !message) {
       return NextResponse.json({ error: 'Please fill out all fields.' }, { status: 400 });
     }
 
@@ -62,6 +62,7 @@ New Contact Inquiry
 
 Name: ${name}
 Email: ${email}
+Reason: ${reason}
 
 Message:
 ${message}
@@ -141,7 +142,7 @@ ${name}
 <td style="padding-bottom:20px;">
 
 <p style="margin:0;color:#6b7280;font-size:13px;">
-EMAIL
+EMAIL:
 </p>
 
 <p style="margin:6px 0 0;font-size:17px;">
@@ -161,9 +162,12 @@ ${email}
 <tr>
 
 <td>
-
 <p style="margin:0 0 10px;color:#6b7280;font-size:13px;">
-MESSAGE
+REASON: 
+</p>
+<p>${reason}</p>
+<p style="margin:0 0 10px;color:#6b7280;font-size:13px;">
+MESSAGE:
 </p>
 
 <div
@@ -218,7 +222,7 @@ margin:12px 0 0;
 font-size:12px;
 color:#c0c4cc;
 ">
-This message was generated automatically from your website contact form.
+This message was generated automatically from Rubytech contact form.
 </p>
 
 </td>

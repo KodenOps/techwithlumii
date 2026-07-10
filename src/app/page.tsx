@@ -122,7 +122,7 @@ function CountUp({ value, suffix = '', decimals = 0 }: { value: number; suffix?:
 export default function LandingPage() {
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', reason: "", message: '' });
   const [submitState, setSubmitState] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [submitMessage, setSubmitMessage] = useState('');
   const heroRef = useRef<HTMLDivElement>(null);
@@ -182,7 +182,7 @@ export default function LandingPage() {
 
       setSubmitState('success');
       setSubmitMessage('Thanks! Your message has been sent.');
-      setFormData({ name: '', email: '', message: '' });
+      setFormData({ name: '', email: '', reason: "", message: '' });
     } catch (error) {
       setSubmitState('error');
       setSubmitMessage(error instanceof Error ? error.message : 'Unable to send your message right now.');
@@ -546,8 +546,8 @@ export default function LandingPage() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.2 }}
-            className="grid gap-px overflow-hidden rounded-2xl sm:grid-cols-3"
-            style={{ background: line }}
+            className="grid gap-2 overflow-hidden rounded-2xl sm:grid-cols-3"
+            // style={{  }}
           >
             {services.map((service) => {
               const Icon = service.icon;
@@ -663,7 +663,7 @@ export default function LandingPage() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.2 }}
-            className="grid gap-6 lg:grid-cols-3"
+            className="grid gap-6 lg:grid-cols-2 "
           >
             {testimonials.map((item) => (
               <motion.article
@@ -743,6 +743,39 @@ export default function LandingPage() {
                   required
                 />
               </label>
+                  <label
+      className="block text-xs font-medium uppercase tracking-wide"
+      style={{ color: "rgba(245,243,238,0.7)" }}
+    >
+      Reason for Contact
+      <select
+        value={formData.reason}
+        onChange={(event) =>
+          setFormData((current) => ({
+            ...current,
+            reason: event.target.value,
+          }))
+        }
+        className="mt-2.5 w-full rounded-lg bg-transparent px-3.5 py-3 text-sm text-white outline-none transition focus:border-[#B78A46]"
+        style={{
+          border: "1px solid rgba(245,243,238,0.14)",
+          background: "#15181F",
+        }}
+        required
+      >
+        <option value="" disabled>
+          Select a reason
+        </option>
+        <option value="Website Development">Website Development</option>
+        <option value="Corporate Training">Corporate Training</option>
+        <option value="Tech Bootcamp">Tech Bootcamp</option>
+        <option value="Outsourcing">Outsourcing</option>
+        <option value="IT Consulting">IT Consulting</option>
+        <option value="Technical Support">Technical Support</option>
+        <option value="Partnership">Partnership</option>
+        <option value="General Inquiry">General Inquiry</option>
+      </select>
+    </label>
               <label className="block text-xs font-medium uppercase tracking-wide" style={{ color: 'rgba(245,243,238,0.7)' }}>
                 What are you looking for?
                 <textarea
