@@ -244,7 +244,7 @@ export default function LandingPage() {
         style={{ scaleX: scrollYProgress, background: BRASS }}
       />
 
-      <div className="relative z-10 mx-auto flex min-h-screen max-w-6xl flex-col px-6 py-6 lg:px-8">
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col px-6 py-6 lg:px-8">
         {/* HEADER */}
         <header
           className="sticky top-0 z-50 mb-2 flex items-center justify-between border-b py-5 backdrop-blur-md"
@@ -325,7 +325,7 @@ export default function LandingPage() {
               style={{ color: BRASS, ...labelFont }}
             >
               <span className="h-px w-8" style={{ background: BRASS }} />
-              Tech Training Agency
+              Value driven Services, Everyday
             </motion.p>
 
             <motion.div
@@ -335,10 +335,10 @@ export default function LandingPage() {
               className="max-w-xl space-y-6"
             >
               <h2 className="text-[2.6rem] leading-[1.08] tracking-tight sm:text-6xl" style={{ ...displayFont, fontWeight: 500 }}>
-                Future-ready training for <em style={{ color: BRASS, fontStyle: 'italic' }}>ambitious</em> builders.
+                Agency solely built For <em style={{ color: BRASS, fontStyle: 'italic' }}>Empowering</em> And Delivering Value.
               </h2>
               <p className="text-lg leading-8" style={{ color: muted }}>
-                Learn modern skills, ship real projects, and build confidence with expert-led bootcamps, hands-on labs, and career-ready guidance.
+                We help ambitious individuals and teams build skills, ship projects, and grow confidence to earn in a saturated market. Our services are designed to provide practical skills and real-world experience.
               </p>
             </motion.div>
 
@@ -704,10 +704,10 @@ export default function LandingPage() {
             <div className="space-y-5">
               <p className="text-xs uppercase tracking-[0.28em]" style={{ color: BRASS, ...labelFont }}>Contact us</p>
               <h3 className="max-w-md text-3xl leading-tight text-white sm:text-4xl" style={{ ...displayFont, fontWeight: 500 }}>
-                Ready to take your career in Technology to the next stage? 
+                Let's build something great together and make an impact.
               </h3>
               <p className="max-w-md text-base leading-7" style={{ color: 'rgba(245,243,238,0.62)' }}>
-               You are one step away from starting your journey with Rubytech. Fill out the form and we will get back to you as soon as possible.
+               You are one step away from getting in touch with us. Fill out the form and we will get back to you as soon as possible.
               </p>
             </div>
             <motion.form
