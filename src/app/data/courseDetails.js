@@ -1,8 +1,8 @@
 import createIllustration from "@/components/createIllustration"
 import { Code, Database, Cloud, Zap, Users, Award, Briefcase, TrendingUp } from 'lucide-react';
-import devops from "@/assets/devops.png"
-import webdev from "@/assets/webdev.png"
-import excel from "@/assets/excel.png"
+import devops from "@/assets/devopss.png"
+import webdev from "@/assets/webdevs.png"
+import excel from "@/assets/excelss.png"
 const courseDetails = [
   {
     id: 'web-dev-bootcamp',

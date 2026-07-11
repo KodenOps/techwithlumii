@@ -1,7 +1,4 @@
 import createIllustration from "@/components/createIllustration"
-import devops from "@/assets/devops.png"
-// import excel from "@/assets/excel.png"
-// import webdev from "@/assets/webdev.png"
 const coursePreviews = [
   {
     title: 'Website Development Bootcamp - HTML, CSS, JS, AI',

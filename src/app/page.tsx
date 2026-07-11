@@ -22,12 +22,12 @@ import services from "@/app/data/services"
 import coursePreviews from "@/app/data/coursePreviews"
 import testimonials from "@/app/data/testimonials"
 import createIllustration from "@/components/createIllustration"
-import createAvatar from "@/components/createAvater"
 import {createTexture} from "@/components/createTexture"
 import TrustedByStrip from "@/components/TrustedByStrip"
 import SectionMark from '@/components/SectionMark';
 import LineIllustration from '@/components/LineIllustration';
 import Image1 from '@/assets/image1.png'
+import cover2 from '@/assets/cover2.png'
 import Image from 'next/image';
 /**
  * ---------------------------------------------------------------
@@ -390,7 +390,7 @@ export default function LandingPage() {
           >
             <Image
               // style={{ y: heroImageY }}
-              src={Image1}
+              src={cover2}
               // src={createIllustration('Live Cohort', '#1B1E27', '#2E2A22')}
               alt="Students collaborating in a tech training workshop"
               onError={handleImageError}
