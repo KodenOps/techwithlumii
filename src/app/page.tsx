@@ -22,7 +22,7 @@ import services from "@/app/data/services"
 import coursePreviews from "@/app/data/coursePreviews"
 import testimonials from "@/app/data/testimonials"
 import createIllustration from "@/components/createIllustration"
-import {createTexture} from "@/components/createTexture"
+import {createTexture} from "@/components/createTexture" 
 import TrustedByStrip from "@/components/TrustedByStrip"
 import SectionMark from '@/components/SectionMark';
 import LineIllustration from '@/components/LineIllustration';
@@ -40,7 +40,7 @@ import Image from 'next/image';
  *   - a subtle parallax on the hero image
  *   - a faint grain texture over the whole page for depth
  * Motion stays slow, small-amplitude, and purposeful — no bounce,
- * no rotation, nothing that reads as playful.
+ * no rotation, nothing that reads as playful..
  * ---------------------------------------------------------------
  */
 
