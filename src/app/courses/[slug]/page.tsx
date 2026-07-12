@@ -220,7 +220,7 @@ export default function CoursePage({ params }: CoursePageProps) {
         </button>
       </header>
 
-      <div className="mx-auto max-w-6xl px-6 py-8 lg:px-8 lg:py-12">
+      <div className="mx-auto md:max-w-6xl w-full px-4 md:px-6 py-8 lg:px-8 lg:py-12">
         {/* HERO */}
         <motion.section
           initial={{ opacity: 0, y: 20 }}
@@ -307,81 +307,6 @@ export default function CoursePage({ params }: CoursePageProps) {
           </motion.div>
         </motion.section>
 
-        {/* PRICING — boarding pass variation */}
-        <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="relative mb-16 overflow-hidden rounded-2xl"
-          style={{ border: `1px solid ${line}` }}
-        >
-          <div className="flex flex-col sm:flex-row">
-            {/* MAIN FARE PANEL */}
-            <div className="flex-1 p-8 sm:p-10" style={{ background: cardBg }}>
-              <div className="flex items-center justify-between">
-                <p className="text-xs uppercase tracking-[0.24em]" style={{ color: mutedSoft, ...labelFont }}>
-                  Cohort Fare
-                </p>
-                <p className="text-xs uppercase tracking-[0.24em]" style={{ color: mutedSoft, ...labelFont }}>
-                  {course.slug.replace(/-/g, ' ')}
-                </p>
-              </div>
-
-              <div className="mt-6 flex flex-wrap items-baseline gap-3">
-                <span className="text-5xl font-bold" style={displayFont}>
-                  {course.currency} {course.price.toLocaleString('en-NG')}
-                </span>
-              </div>
-              <p className="mt-2 text-sm" style={{ color: mutedSoft }}>
-                <span className="line-through">{course.currency} {course.originalPrice.toLocaleString('en-NG')}</span>
-                {' '}regular fare
-              </p>
-
-              <div className="mt-8 space-y-2.5 border-t pt-6" style={{ borderColor: line }}>
-                {course.paymentOptions.map((option, i) => (
-                  <div key={i} className="flex items-center gap-2.5 text-sm">
-                    <span className="h-1 w-1 rounded-full" style={{ background: BRASS }} />
-                    <span style={{ color: muted }}>{option}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* PERFORATION */}
-            <div className="relative hidden w-0 sm:block">
-              <div className="absolute inset-y-6 left-0 border-l border-dashed" style={{ borderColor: isDark ? 'rgba(11,13,18,0.35)' : 'rgba(255,255,255,0.5)' }} />
-              <span className="absolute -top-3 left-1/2 h-6 w-6 -translate-x-1/2 rounded-full" style={{ background: bg }} />
-              <span className="absolute -bottom-3 left-1/2 h-6 w-6 -translate-x-1/2 rounded-full" style={{ background: bg }} />
-            </div>
-            <div className="block h-0 border-t border-dashed sm:hidden" style={{ borderColor: isDark ? 'rgba(11,13,18,0.35)' : 'rgba(255,255,255,0.5)' }} />
-
-            {/* DISCOUNT STUB */}
-            <div
-              className="flex flex-col items-center justify-center gap-1 p-8 text-center sm:w-56 sm:p-10"
-              style={{ background: BRASS, color: bg }}
-            >
-              <span className="text-[10px] font-bold uppercase tracking-[0.2em]" style={labelFont}>
-                Fare Class
-              </span>
-              <span className="text-xs font-semibold uppercase tracking-wide" style={labelFont}>
-                Early Bird
-              </span>
-              <span className="mt-4 text-5xl font-bold leading-none" style={displayFont}>
-                {course.discount}%
-              </span>
-              <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.2em]" style={labelFont}>
-                Off this cohort
-              </span>
-              <div
-                className="mt-6 h-6 w-full"
-                style={{
-                  background: 'repeating-linear-gradient(90deg, currentColor 0 2px, transparent 2px 5px)',
-                  opacity: 0.55,
-                }}
-              />
-            </div>
-          </div>
-        </motion.section>
 
         {/* LEARNING OUTCOMES */}
         <motion.section
@@ -504,6 +429,74 @@ export default function CoursePage({ params }: CoursePageProps) {
             ))}
           </div>
         </motion.section>
+        {/* PRICING — boarding pass variation */}
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="relative mb-16 overflow-hidden rounded-2xl"
+          style={{ border: `1px solid ${line}` }}
+        >
+          <div className="flex flex-col sm:flex-row">
+            {/* MAIN FARE PANEL */}
+            <div className="flex-1 p-8 sm:p-10" style={{ background: cardBg }}>
+              <div className="flex items-center justify-between">
+                <p className="text-xs uppercase tracking-[0.24em]" style={{ color: mutedSoft, ...labelFont }}>
+                  Cohort Fare
+                </p>
+               
+              </div>
+
+              <div className="mt-6 flex flex-wrap items-baseline gap-3">
+                <span className="text-5xl font-bold" style={displayFont}>
+                  {course.currency} {course.price.toLocaleString('en-NG')}
+                </span>
+              </div>
+              <p className="mt-2 text-sm" style={{ color: mutedSoft }}>
+                <span className="line-through">{course.currency} {course.originalPrice.toLocaleString('en-NG')}</span>
+                {' '}regular fare
+              </p>
+
+              <div className="mt-8 space-y-2.5 border-t pt-6" style={{ borderColor: line }}>
+                
+              </div>
+            </div>
+
+            {/* PERFORATION */}
+            <div className="relative hidden w-0 sm:block">
+              <div className="absolute inset-y-6 left-0 border-l border-dashed" style={{ borderColor: isDark ? 'rgba(11,13,18,0.35)' : 'rgba(255,255,255,0.5)' }} />
+              <span className="absolute -top-3 left-1/2 h-6 w-6 -translate-x-1/2 rounded-full" style={{ background: bg }} />
+              <span className="absolute -bottom-3 left-1/2 h-6 w-6 -translate-x-1/2 rounded-full" style={{ background: bg }} />
+            </div>
+            <div className="block h-0 border-t border-dashed sm:hidden" style={{ borderColor: isDark ? 'rgba(11,13,18,0.35)' : 'rgba(255,255,255,0.5)' }} />
+
+            {/* DISCOUNT STUB */}
+            <div
+              className="flex flex-col items-center justify-center gap-1 p-8 text-center sm:w-56 sm:p-10"
+              style={{ background: BRASS, color: bg }}
+            >
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em]" style={labelFont}>
+                Fare Class
+              </span>
+              <span className="text-xs font-semibold uppercase tracking-wide" style={labelFont}>
+                Early Bird
+              </span>
+              <span className="mt-4 text-5xl font-bold leading-none" style={displayFont}>
+                {course.discount}%
+              </span>
+              <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.2em]" style={labelFont}>
+                Off this cohort
+              </span>
+              <div
+                className="mt-6 h-6 w-full"
+                style={{
+                  background: 'repeating-linear-gradient(90deg, currentColor 0 2px, transparent 2px 5px)',
+                  opacity: 0.55,
+                }}
+              />
+            </div>
+          </div>
+        </motion.section>
 
         {/* FAQ */}
         <motion.section
@@ -541,17 +534,19 @@ export default function CoursePage({ params }: CoursePageProps) {
         </motion.section>
 
         {/* ENROLL / REGISTRATION SECTION */}
-        <motion.section
+      <motion.section
           id="enroll"
           ref={enrollRef}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-16 rounded-3xl p-8 sm:p-12 lg:p-16"
-          style={{ background: cardBgSoft, border: `1px solid ${line}` }}
-        >
+          className="mb-16 rounded-3xl p-0 sm:p-12 lg:p-16 border-0 lg:border"
+          style={{
+            background: cardBgSoft,
+            borderColor: line,
+          }}>
           <div className="grid gap-12 lg:grid-cols-[1fr_0.9fr] lg:items-start">
-            <div className="space-y-6">
+            <div className="p-8 space-y-6">
               <h2 className="text-3xl font-semibold sm:text-4xl" style={{ ...displayFont, fontWeight: 500 }}>
                 Ready to Transform Your Career?
               </h2>
@@ -672,9 +667,9 @@ export default function CoursePage({ params }: CoursePageProps) {
                 </p>
               </form>
             ) : (
-              <div className="rounded-2xl overflow-hidden" style={{ background: cardBg, border: `1px solid ${line}` }}>
+              <div className="rounded-2xl  overflow-hidden" style={{ background: cardBg, border: `1px solid ${line}` }}>
                 <div
-                  className="flex flex-wrap items-center justify-between gap-3 px-7 py-5"
+                  className="flex flex-wrap bg-red-100 items-center justify-between gap-3 px-7 py-5"
                   style={{ background: isDark ? 'rgba(183,138,70,0.14)' : 'rgba(183,138,70,0.18)' }}
                 >
                   <div className="flex items-center gap-3">
@@ -689,28 +684,28 @@ export default function CoursePage({ params }: CoursePageProps) {
                   <span className="text-xs" style={{ color: BRASS, ...labelFont }}>{course.title}</span>
                 </div>
 
-                <div className="space-y-1 px-7 py-6">
-                  <div className="flex justify-between border-b py-3 text-sm" style={{ borderColor: line }}>
+                <div className="space-y-1 px-7 py-6 ">
+                  <div className="flex md:flex-row flex-col justify-between border-b py-3 text-sm" style={{ borderColor: line }}>
                     <span style={{ color: muted }}>Registered name</span>
                     <span className="font-semibold">{form.fullName}</span>
                   </div>
-                  <div className="flex justify-between border-b py-3 text-sm" style={{ borderColor: line }}>
+                  <div className="flex md:flex-row flex-col justify-between border-b py-3 text-sm" style={{ borderColor: line }}>
                     <span style={{ color: muted }}>Pathway</span>
                     <span className="font-semibold">{course.title}</span>
                   </div>
-                  <div className="flex justify-between border-b py-3 text-sm" style={{ borderColor: line }}>
+                  <div className="flex md:flex-row flex-col justify-between border-b py-3 text-sm" style={{ borderColor: line }}>
                     <span style={{ color: muted }}>Bank name</span>
                     <span className="font-semibold" style={labelFont}>Moniepoint</span>
                   </div>
-                  <div className="flex justify-between border-b py-3 text-sm" style={{ borderColor: line }}>
+                  <div className="flex md:flex-row flex-col justify-between border-b py-3 text-sm" style={{ borderColor: line }}>
                     <span style={{ color: muted }}>Account number</span>
                     <span className="font-semibold" style={labelFont}>6817531903</span>
                   </div>
-                  <div className="flex justify-between border-b py-3 text-sm" style={{ borderColor: line }}>
+                  <div className="flex md:flex-row flex-col justify-between border-b py-3 text-sm" style={{ borderColor: line }}>
                     <span style={{ color: muted }}>Account name</span>
                     <span className="font-semibold" style={labelFont}>Rubytech Consult</span>
                   </div>
-                  <div className="flex justify-between py-3 text-sm">
+                  <div className="flex md:flex-row flex-col justify-between py-3 text-sm">
                     <span style={{ color: muted }}>Amount to pay</span>
                     <span className="text-base font-bold" style={{ color: BRASS, ...labelFont }}>
                       {course.currency} {course.price.toLocaleString('en-NG')}
