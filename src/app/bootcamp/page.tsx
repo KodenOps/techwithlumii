@@ -4,6 +4,8 @@ import { useState, useRef, type FormEvent } from 'react';
 import { Space_Grotesk, Inter, JetBrains_Mono } from 'next/font/google';
 import Link from 'next/link';
 import courseDetails from '@/app/data/courseDetails';
+import testimonials from '../data/testimonials';
+import Image from 'next/image';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -331,11 +333,18 @@ export default function BootcampPage() {
             <h2>Replace this with real graduate quotes before you run the ad.</h2>
           </div>
           <div className="proof-grid">
-            {[1, 2, 3].map((i) => (
-              <div className="quote" key={i}>
+            {testimonials.slice(0,3).map((i) => (
+              <div className="quote flex flex-col justify-between bg-red-200 h-full" key={i.name} >
                 <div className="stars">★★★★★</div>
-                <p>&quot;[Add a real quote from a graduate about their experience and results.]&quot;</p>
-                <div className="who">— Name<span>Pathway · Cohort</span></div>
+                <p>&quot; {i.quote}&quot;</p>
+            <div className="who  bottom-4  w-full flex items-center justify-start gap-2">
+                    <Image src={i.image} alt='avatar' className='rounded-full w-10 h-10'/>
+                    <p className='w-full'>{i.name}
+                <span>{i.role}</span>
+                </p>
+            
+                
+                </div>
               </div>
             ))}
           </div>
