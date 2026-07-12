@@ -330,7 +330,7 @@ export default function BootcampPage() {
         <div className="wrap">
           <div className="sec-head">
             <span className="eyebrow">FROM PAST COHORTS</span>
-            <h2>Replace this with real graduate quotes before you run the ad.</h2>
+            <h2>Quality speaks a lot and we have past cohort members who speaks highly of us.</h2>
           </div>
           <div className="proof-grid">
             {testimonials.slice(0,3).map((i) => (
