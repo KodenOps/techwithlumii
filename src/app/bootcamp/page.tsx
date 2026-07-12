@@ -4,8 +4,6 @@ import { useState, useRef, type FormEvent } from 'react';
 import { Space_Grotesk, Inter, JetBrains_Mono } from 'next/font/google';
 import Link from 'next/link';
 import courseDetails from '@/app/data/courseDetails';
-import testimonials from '../data/testimonials';
-import Image from 'next/image';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -119,7 +117,6 @@ const initialForm: RegistrationForm = {
   pathway: '',
   expectations: '',
 };
-const BRASS = '#B78A46';
 
 export default function BootcampPage() {
   const [form, setForm] = useState<RegistrationForm>(initialForm);
@@ -228,7 +225,7 @@ export default function BootcampPage() {
             <a href="#proof">Reviews</a>
             <a href="/">Company site</a>
           </div>
-          <a className="nav-cta" href="#register" style={{backgroundColor: `${BRASS}`}}>Reserve a seat</a>
+          <a className="nav-cta" href="#register">Reserve a seat</a>
         </div>
       </nav>
 
@@ -331,21 +328,14 @@ export default function BootcampPage() {
         <div className="wrap">
           <div className="sec-head">
             <span className="eyebrow">FROM PAST COHORTS</span>
-            <h2>Quality speaks a lot and we have past cohort members who speaks highly of us.</h2>
+            <h2>Replace this with real graduate quotes before you run the ad.</h2>
           </div>
-          <div className="proof-grid ">
-            {testimonials.slice(0,3).map((i) => (
-              <div className="quote flex flex-col justify-between bg-red-200 h-full" key={i.name} >
+          <div className="proof-grid">
+            {[1, 2, 3].map((i) => (
+              <div className="quote" key={i}>
                 <div className="stars">★★★★★</div>
-                <p>&quot; {i.quote}&quot;</p>
-            <div className="who  bottom-4  w-full flex items-center justify-start gap-2">
-                    <Image src={i.image} alt='avatar' className='rounded-full w-10 h-10'/>
-                    <p className='w-full'>{i.name}
-                <span>{i.role}</span>
-                </p>
-            
-                
-                </div>
+                <p>&quot;[Add a real quote from a graduate about their experience and results.]&quot;</p>
+                <div className="who">— Name<span>Pathway · Cohort</span></div>
               </div>
             ))}
           </div>
@@ -355,7 +345,7 @@ export default function BootcampPage() {
       <section id="register" className="form-section" ref={registerRef}>
         <div className="wrap">
           <div className="sec-head" style={{ margin: '0 auto 40px', textAlign: 'center', maxWidth: 640 }}>
-            <span className="eyebrow" style={{ justifyContent: 'center'}}>RESERVE YOUR SEAT</span>
+            <span className="eyebrow" style={{ justifyContent: 'center' }}>RESERVE YOUR SEAT</span>
             <h2>Your seat is one form away.</h2>
             <p>Fill this in, get your unique registration code, then complete payment to lock in your spot.</p>
           </div>
@@ -441,12 +431,19 @@ export default function BootcampPage() {
                         <option key={p.id} value={p.value}>{p.tag} — {p.title.split(' — ')[0]}</option>
                       ))}
                     </select>
-                    <div className="err">{errors.pathway}</div>
                     {selectedCourse && (
-                      <p style={{ fontFamily: 'var(--font-mono)', fontSize: 12.5, color: '#c9cbc2', marginTop: 4 }}>
-                        Fee for this pathway: {amountLabel}
-                      </p>
+                        <>
+                     <label htmlFor="phone" className='mt-4'>Fee</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      value={ amountLabel}
+                      required
+                      disabled
+                    />
+                    </>
                     )}
+                    <div className="err">{errors.pathway}</div>
                   </div>
                 </div>
 
@@ -471,7 +468,7 @@ export default function BootcampPage() {
               </form>
             </div>
           ) : (
-            <div className="ticket" style={{ maxWidth: 760, margin: '0 auto' }}>
+            <div className="ticket">
               <div className="ticket-head">
                 <div className="ok"><div className="circle">✓</div><h3>Seat reserved — complete payment to confirm</h3></div>
                 <span>{form.pathway.toUpperCase()}</span>
@@ -480,7 +477,7 @@ export default function BootcampPage() {
                 <div className="row"><span className="k">Registered name</span><span className="v">{form.fullName}</span></div>
                 <div className="row"><span className="k">Pathway</span><span className="v">{form.pathway}</span></div>
                 <div className="row"><span className="k">Bank name</span><span className="v">Moniepoint</span></div>
-                <div className="row"><span className="k">Account number</span><span className="v">6817531903</span></div>
+                <div className="row"><span className="k">Account number</span><span className="v">2345678902</span></div>
                 <div className="row"><span className="k">Account name</span><span className="v">Rubytech Consult</span></div>
                 <div className="row"><span className="k">Amount to pay</span><span className="v" style={{ color: '#E8A33D' }}>{amountLabel}</span></div>
 
@@ -510,7 +507,7 @@ export default function BootcampPage() {
                     className="copy-btn"
                     onClick={() =>
                       copyText(
-                        `Bank: Moniepoint\nAccount Number: 6817531903\nAccount Name: Rubytech Consult\nAmount to Pay: ${amountLabel}\nNarration/Description: ${code}`,
+                        `Bank: Moniepoint\nAccount Number: 2345678902\nAccount Name: Rubytech Consult\nAmount to Pay: ${amountLabel}\nNarration/Description: ${code}`,
                         'all'
                       )
                     }
@@ -1135,9 +1132,8 @@ export default function BootcampPage() {
         /* ============ TICKET / PAYMENT ============ */
         .ticket {
           background: var(--ink);
-          border: 1px solid var(--ink-line);
-          border-radius: var(--radius);
-          overflow: hidden;
+          border-top: 1px solid var(--ink-line);
+          border-bottom: 1px solid var(--ink-line);
         }
         .ticket-head {
           background: var(--devops-dim);
@@ -1179,7 +1175,9 @@ export default function BootcampPage() {
         .ticket-body .row {
           display: flex;
           justify-content: space-between;
-          padding: 12px 0;
+          align-items: baseline;
+          gap: 16px;
+          padding: 14px 0;
           border-bottom: 1px dashed var(--ink-line);
           font-size: 14.5px;
         }
@@ -1188,10 +1186,28 @@ export default function BootcampPage() {
         }
         .ticket-body .row .k {
           color: var(--cloud-dim);
+          flex-shrink: 0;
         }
         .ticket-body .row .v {
           font-weight: 600;
           font-family: var(--mono);
+          text-align: right;
+        }
+        @media (max-width: 560px) {
+          .ticket-head,
+          .ticket-body {
+            padding-left: 20px;
+            padding-right: 20px;
+          }
+          .ticket-body .row {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 4px;
+            padding: 12px 0;
+          }
+          .ticket-body .row .v {
+            text-align: left;
+          }
         }
         .code-box {
           margin-top: 22px;

@@ -18,9 +18,9 @@ const courseDetails = [
     pace: 'Weekends | 3 hours daily',
     level: 'Beginner to Intermediate',
     
-    price: 80000,
+    price: 45000,
     originalPrice: 95000,
-    discount: 47,
+    discount: 53,
     currency: 'NGN',
     paymentOptions: ['Full payment'],
     
@@ -192,9 +192,9 @@ const courseDetails = [
     pace: 'Weekends | 3 hours daily',
     level: 'Beginner to Intermediate',
     
-    price: 80000,
-    originalPrice: 120000,
-    discount: 33,
+    price: 40000,
+    originalPrice: 75000,
+    discount: 27,
     currency: 'NGN',
     paymentOptions: ['Full payment'],
     
@@ -366,9 +366,9 @@ const courseDetails = [
     pace: 'Weekends | 3 hours daily',
     level: 'Beginner to Intermediate',
     
-    price: 50000,
+    price: 30000,
     originalPrice: 80000,
-    discount: 38,
+    discount: 63,
     currency: 'NGN',
     paymentOptions: ['Full payment', 'Installment (3x)'],
     
