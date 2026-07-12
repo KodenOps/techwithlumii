@@ -1,18 +1,16 @@
 'use client';
 
-import { type SyntheticEvent, useEffect, useState } from 'react';
+import { type SyntheticEvent, useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   ArrowRight,
   Check,
   ChevronDown,
   Clock,
-  DollarSign,
   Mail,
   Moon,
   Sun,
   Users,
-  X,
 } from 'lucide-react';
 import courseDetails from '@/app/data/courseDetails';
 import Image from 'next/image';
@@ -23,12 +21,67 @@ interface CoursePageProps {
   params: { slug: string };
 }
 
+// ─── Shared with /bootcamp — keep these two in sync if either changes ───
+const NIGERIAN_STATES = [
+  'Abia', 'Adamawa', 'Akwa Ibom', 'Anambra', 'Bauchi', 'Bayelsa', 'Benue', 'Borno',
+  'Cross River', 'Delta', 'Ebonyi', 'Edo', 'Ekiti', 'Enugu', 'Gombe', 'Imo',
+  'Jigawa', 'Kaduna', 'Kano', 'Katsina', 'Kebbi', 'Kogi', 'Kwara', 'Lagos',
+  'Nasarawa', 'Niger', 'Ogun', 'Ondo', 'Osun', 'Oyo', 'Plateau', 'Rivers',
+  'Sokoto', 'Taraba', 'Yobe', 'Zamfara', 'FCT Abuja',
+];
+
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const PHONE_RE = /^(?:\+234|0)[789][01]\d{8}$/;
+
+function generateRegistrationCode(): string {
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+  const prefix = 'RBY';
+  const randomLength = 9;
+  let random = '';
+  const values = new Uint32Array(randomLength);
+  window.crypto.getRandomValues(values);
+  for (let i = 0; i < randomLength; i++) {
+    random += chars[values[i] % chars.length];
+  }
+  return prefix + random;
+}
+
+interface RegistrationForm {
+  fullName: string;
+  email: string;
+  phone: string;
+  state: string;
+  expectations: string;
+}
+
+type FormErrors = Partial<Record<keyof RegistrationForm, string>>;
+
+interface CopyStatus {
+  code: boolean;
+  all: boolean;
+}
+
+const initialForm: RegistrationForm = {
+  fullName: '',
+  email: '',
+  phone: '',
+  state: '',
+  expectations: '',
+};
+// ─────────────────────────────────────────────────────────────────────
+
 export default function CoursePage({ params }: CoursePageProps) {
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-  const [submitState, setSubmitState] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-  const [submitMessage, setSubmitMessage] = useState('');
+
+  const [form, setForm] = useState<RegistrationForm>(initialForm);
+  const [errors, setErrors] = useState<FormErrors>({});
+  const [submitted, setSubmitted] = useState<boolean>(false);
+  const [code, setCode] = useState<string>('');
+  const [copyStatus, setCopyStatus] = useState<CopyStatus>({ code: false, all: false });
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  const [notifyFailed, setNotifyFailed] = useState<boolean>(false);
+  const enrollRef = useRef<HTMLElement>(null);
 
   const course = courseDetails.find((c) => c.slug === params.slug);
 
@@ -44,35 +97,70 @@ export default function CoursePage({ params }: CoursePageProps) {
     window.localStorage.setItem('techwithlumi-theme', theme);
   }, [theme]);
 
+  function updateField<K extends keyof RegistrationForm>(field: K, value: RegistrationForm[K]) {
+    setForm((prev) => ({ ...prev, [field]: value }));
+  }
+
+  function validate(data: RegistrationForm): boolean {
+    const next: FormErrors = {};
+    if (!data.fullName || data.fullName.trim().length < 3) next.fullName = 'Enter your full name.';
+    if (!EMAIL_RE.test(data.email)) next.email = 'Enter a valid email address.';
+    if (!PHONE_RE.test(data.phone.replace(/\s+/g, ''))) next.phone = 'Enter a valid Nigerian phone number.';
+    if (!data.state) next.state = 'Select your state.';
+    if (!data.expectations || data.expectations.trim().length < 5) next.expectations = 'Tell us briefly what you expect.';
+    setErrors(next);
+    return Object.keys(next).length === 0;
+  }
+
   const handleSubmit = async (event: SyntheticEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setSubmitState('loading');
-    setSubmitMessage('');
+    if (!validate(form)) return;
+
+    const newCode = generateRegistrationCode();
+    const submission = {
+      ...form,
+      pathway: course?.title ?? params.slug,
+      code: newCode,
+      submittedAt: new Date().toISOString(),
+    };
 
     try {
-      const response = await fetch('/api/contact', {
+      const existing = JSON.parse(localStorage.getItem('rubytech_bootcamp_leads') || '[]');
+      existing.push(submission);
+      localStorage.setItem('rubytech_bootcamp_leads', JSON.stringify(existing));
+    } catch (err) {
+      // localStorage unavailable — safe to ignore
+    }
+
+    setIsSubmitting(true);
+    setNotifyFailed(false);
+
+    try {
+      const res = await fetch('/api/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          ...formData,
-          course: course?.title,
-        }),
+        body: JSON.stringify(submission),
       });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.error || 'Unable to send your message right now.');
-      }
-
-      setSubmitState('success');
-      setSubmitMessage('Thanks! We\'ll get back to you soon.');
-      setFormData({ name: '', email: '', message: '' });
-    } catch (error) {
-      setSubmitState('error');
-      setSubmitMessage(error instanceof Error ? error.message : 'Unable to send your message right now.');
+      if (!res.ok) setNotifyFailed(true);
+    } catch (err) {
+      setNotifyFailed(true);
+    } finally {
+      setIsSubmitting(false);
+      setCode(newCode);
+      setSubmitted(true);
     }
   };
+
+  function handleEdit() {
+    setSubmitted(false);
+  }
+
+  function copyText(text: string, key: keyof CopyStatus) {
+    navigator.clipboard.writeText(text).then(() => {
+      setCopyStatus((prev) => ({ ...prev, [key]: true }));
+      setTimeout(() => setCopyStatus((prev) => ({ ...prev, [key]: false })), 1800);
+    });
+  }
 
   if (!course) {
     return (
@@ -97,8 +185,15 @@ export default function CoursePage({ params }: CoursePageProps) {
   const line = isDark ? 'rgba(245,243,238,0.10)' : 'rgba(20,23,31,0.10)';
   const cardBg = isDark ? '#15181F' : '#FFFFFF';
   const cardBgSoft = isDark ? '#191C24' : '#F1EFE9';
+  const danger = isDark ? '#F5A3A3' : '#C0392B';
   const displayFont = { fontFamily: "'Fraunces', Georgia, serif" };
   const labelFont = { fontFamily: "'IBM Plex Mono', monospace" };
+
+  const inputStyle: React.CSSProperties = {
+    border: `1px solid ${line}`,
+    color: text,
+    background: 'transparent',
+  };
 
   return (
     <main className="relative min-h-screen transition-colors duration-500" style={{ background: bg, color: text }}>
@@ -212,45 +307,80 @@ export default function CoursePage({ params }: CoursePageProps) {
           </motion.div>
         </motion.section>
 
-        {/* PRICING */}
+        {/* PRICING — boarding pass variation */}
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-16 rounded-2xl p-8 sm:p-12"
-          style={{ background: cardBgSoft, border: `1px solid ${line}` }}
+          className="relative mb-16 overflow-hidden rounded-2xl"
+          style={{ border: `1px solid ${line}` }}
         >
-          <div className="grid gap-8 lg:grid-cols-[1fr_1fr_1fr]">
-            <div>
-              <p className="text-xs uppercase tracking-wide" style={{ color: mutedSoft, ...labelFont }}>
-                Original Price
+          <div className="flex flex-col sm:flex-row">
+            {/* MAIN FARE PANEL */}
+            <div className="flex-1 p-8 sm:p-10" style={{ background: cardBg }}>
+              <div className="flex items-center justify-between">
+                <p className="text-xs uppercase tracking-[0.24em]" style={{ color: mutedSoft, ...labelFont }}>
+                  Cohort Fare
+                </p>
+                <p className="text-xs uppercase tracking-[0.24em]" style={{ color: mutedSoft, ...labelFont }}>
+                  {course.slug.replace(/-/g, ' ')}
+                </p>
+              </div>
+
+              <div className="mt-6 flex flex-wrap items-baseline gap-3">
+                <span className="text-5xl font-bold" style={displayFont}>
+                  {course.currency} {course.price.toLocaleString('en-NG')}
+                </span>
+              </div>
+              <p className="mt-2 text-sm" style={{ color: mutedSoft }}>
+                <span className="line-through">{course.currency} {course.originalPrice.toLocaleString('en-NG')}</span>
+                {' '}regular fare
               </p>
-              <p className="mt-2 text-3xl line-through" style={{ color: mutedSoft }}>
-                NGN {course.originalPrice.toLocaleString('en-NG')}
-              </p>
-              
-            </div>
-            <div>
-              <p className="text-xs uppercase tracking-wide" style={{ color: BRASS, ...labelFont }}>
-                You Save
-              </p>
-              <p className="mt-2 text-3xl font-bold" style={{ color: BRASS }}>
-                {course.discount}%
-              </p>
-            </div>
-            <div>
-              <p className="text-xs uppercase tracking-wide" style={{ color: mutedSoft, ...labelFont }}>
-                Today's Price
-              </p>
-              <div className="mt-2 flex items-baseline gap-2">
-                <span className="text-4xl font-bold"> NGN {course.price.toLocaleString('en-NG')}</span>
-                <span style={{ color: mutedSoft }}>{course.currency}</span>
+
+              <div className="mt-8 space-y-2.5 border-t pt-6" style={{ borderColor: line }}>
+                {course.paymentOptions.map((option, i) => (
+                  <div key={i} className="flex items-center gap-2.5 text-sm">
+                    <span className="h-1 w-1 rounded-full" style={{ background: BRASS }} />
+                    <span style={{ color: muted }}>{option}</span>
+                  </div>
+                ))}
               </div>
             </div>
+
+            {/* PERFORATION */}
+            <div className="relative hidden w-0 sm:block">
+              <div className="absolute inset-y-6 left-0 border-l border-dashed" style={{ borderColor: isDark ? 'rgba(11,13,18,0.35)' : 'rgba(255,255,255,0.5)' }} />
+              <span className="absolute -top-3 left-1/2 h-6 w-6 -translate-x-1/2 rounded-full" style={{ background: bg }} />
+              <span className="absolute -bottom-3 left-1/2 h-6 w-6 -translate-x-1/2 rounded-full" style={{ background: bg }} />
+            </div>
+            <div className="block h-0 border-t border-dashed sm:hidden" style={{ borderColor: isDark ? 'rgba(11,13,18,0.35)' : 'rgba(255,255,255,0.5)' }} />
+
+            {/* DISCOUNT STUB */}
+            <div
+              className="flex flex-col items-center justify-center gap-1 p-8 text-center sm:w-56 sm:p-10"
+              style={{ background: BRASS, color: bg }}
+            >
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em]" style={labelFont}>
+                Fare Class
+              </span>
+              <span className="text-xs font-semibold uppercase tracking-wide" style={labelFont}>
+                Early Bird
+              </span>
+              <span className="mt-4 text-5xl font-bold leading-none" style={displayFont}>
+                {course.discount}%
+              </span>
+              <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.2em]" style={labelFont}>
+                Off this cohort
+              </span>
+              <div
+                className="mt-6 h-6 w-full"
+                style={{
+                  background: 'repeating-linear-gradient(90deg, currentColor 0 2px, transparent 2px 5px)',
+                  opacity: 0.55,
+                }}
+              />
+            </div>
           </div>
-          <p className="mt-6 text-sm" style={{ color: muted }}>
-            {course.paymentOptions.join(' • ')}
-          </p>
         </motion.section>
 
         {/* LEARNING OUTCOMES */}
@@ -410,16 +540,17 @@ export default function CoursePage({ params }: CoursePageProps) {
           </div>
         </motion.section>
 
-        {/* ENROLL SECTION */}
+        {/* ENROLL / REGISTRATION SECTION */}
         <motion.section
           id="enroll"
+          ref={enrollRef}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="mb-16 rounded-3xl p-8 sm:p-12 lg:p-16"
           style={{ background: cardBgSoft, border: `1px solid ${line}` }}
         >
-          <div className="grid gap-12 lg:grid-cols-[1fr_0.9fr] lg:items-center">
+          <div className="grid gap-12 lg:grid-cols-[1fr_0.9fr] lg:items-start">
             <div className="space-y-6">
               <h2 className="text-3xl font-semibold sm:text-4xl" style={{ ...displayFont, fontWeight: 500 }}>
                 Ready to Transform Your Career?
@@ -435,60 +566,216 @@ export default function CoursePage({ params }: CoursePageProps) {
                   </div>
                 ))}
               </div>
+              <div
+                className="rounded-lg p-4 text-sm"
+                style={{ background: isDark ? 'rgba(183,138,70,0.1)' : 'rgba(183,138,70,0.15)', color: text }}
+              >
+                🔥 <span style={{ fontWeight: 600 }}>Early cohort seats are limited.</span> Only a successful payment Counts as a seat reservation
+              </div>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-4 rounded-2xl p-7" style={{ background: cardBg, border: `1px solid ${line}` }}>
-              <label className="block text-xs font-medium uppercase tracking-wide" style={{ color: muted }}>
-                Full Name
-                <input
-                  type="text"
-                  value={formData.name}
-                  onChange={(e) => setFormData((curr) => ({ ...curr, name: e.target.value }))}
-                  placeholder="Jane Doe"
-                  className="mt-2.5 w-full rounded-lg bg-transparent px-3.5 py-3 text-sm outline-none transition"
-                  style={{ border: `1px solid ${line}`, color: text }}
-                  required
-                />
-              </label>
-              <label className="block text-xs font-medium uppercase tracking-wide" style={{ color: muted }}>
-                Email
-                <input
-                  type="email"
-                  value={formData.email}
-                  onChange={(e) => setFormData((curr) => ({ ...curr, email: e.target.value }))}
-                  placeholder="hello@example.com"
-                  className="mt-2.5 w-full rounded-lg bg-transparent px-3.5 py-3 text-sm outline-none transition"
-                  style={{ border: `1px solid ${line}`, color: text }}
-                  required
-                />
-              </label>
-              <label className="block text-xs font-medium uppercase tracking-wide" style={{ color: muted }}>
-                Message
-                <textarea
-                  rows={3}
-                  value={formData.message}
-                  onChange={(e) => setFormData((curr) => ({ ...curr, message: e.target.value }))}
-                  placeholder="Tell us about yourself..."
-                  className="mt-2.5 w-full rounded-lg bg-transparent px-3.5 py-3 text-sm outline-none transition"
-                  style={{ border: `1px solid ${line}`, color: text }}
-                  required
-                />
-              </label>
-              <button
-                type="submit"
-                disabled={submitState === 'loading'}
-                className="inline-flex w-full items-center justify-center gap-2 rounded-lg px-6 py-3.5 text-sm font-semibold transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-70"
-                style={{ background: text, color: bg }}
-              >
-                {submitState === 'loading' ? 'Sending...' : 'Enroll Now'}
-                <Mail className="h-4 w-4" />
-              </button>
-              {submitMessage && (
-                <p className="text-sm" style={{ color: submitState === 'error' ? '#F5A3A3' : '#CDECCB' }}>
-                  {submitMessage}
+            {!submitted ? (
+              <form onSubmit={handleSubmit} noValidate className="space-y-4 rounded-2xl p-7" style={{ background: cardBg, border: `1px solid ${line}` }}>
+                <div>
+                  <h3 className="text-lg font-semibold" style={{ ...displayFont }}>Registration form</h3>
+                  <p className="mt-1 text-xs" style={{ color: mutedSoft }}>
+                    Takes less than 2 minutes. You'll get your payment instructions immediately after.
+                  </p>
+                </div>
+
+                <label className="block text-xs font-medium uppercase tracking-wide" style={{ color: muted, ...labelFont }}>
+                  Full Name
+                  <input
+                    type="text"
+                    value={form.fullName}
+                    onChange={(e) => updateField('fullName', e.target.value)}
+                    placeholder="e.g. Chidinma Okafor"
+                    className="mt-2.5 w-full rounded-lg px-3.5 py-3 text-sm outline-none transition"
+                    style={inputStyle}
+                    required
+                  />
+                  {errors.fullName && <span className="mt-1 block text-xs" style={{ color: danger, ...labelFont }}>{errors.fullName}</span>}
+                </label>
+
+                <label className="block text-xs font-medium uppercase tracking-wide" style={{ color: muted, ...labelFont }}>
+                  Email
+                  <input
+                    type="email"
+                    value={form.email}
+                    onChange={(e) => updateField('email', e.target.value)}
+                    placeholder="hello@example.com"
+                    className="mt-2.5 w-full rounded-lg px-3.5 py-3 text-sm outline-none transition"
+                    style={inputStyle}
+                    required
+                  />
+                  {errors.email && <span className="mt-1 block text-xs" style={{ color: danger, ...labelFont }}>{errors.email}</span>}
+                </label>
+
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <label className="block text-xs font-medium uppercase tracking-wide" style={{ color: muted, ...labelFont }}>
+                    Phone Number
+                    <input
+                      type="tel"
+                      value={form.phone}
+                      onChange={(e) => updateField('phone', e.target.value)}
+                      placeholder="080X XXX XXXX"
+                      className="mt-2.5 w-full rounded-lg px-3.5 py-3 text-sm outline-none transition"
+                      style={inputStyle}
+                      required
+                    />
+                    {errors.phone && <span className="mt-1 block text-xs" style={{ color: danger, ...labelFont }}>{errors.phone}</span>}
+                  </label>
+
+                  <label className="block text-xs font-medium uppercase tracking-wide" style={{ color: muted, ...labelFont }}>
+                    State (Nigeria)
+                    <select
+                      value={form.state}
+                      onChange={(e) => updateField('state', e.target.value)}
+                      className="mt-2.5 w-full rounded-lg px-3.5 py-3 text-sm outline-none transition"
+                      style={inputStyle}
+                      required
+                    >
+                      <option value="" disabled>Select your state</option>
+                      {NIGERIAN_STATES.map((s) => (
+                        <option key={s} value={s} style={{ color: '#14171F' }}>{s}</option>
+                      ))}
+                    </select>
+                    {errors.state && <span className="mt-1 block text-xs" style={{ color: danger, ...labelFont }}>{errors.state}</span>}
+                  </label>
+                </div>
+
+                <label className="block text-xs font-medium uppercase tracking-wide" style={{ color: muted, ...labelFont }}>
+                  What do you hope to get out of this bootcamp?
+                  <textarea
+                    rows={3}
+                    value={form.expectations}
+                    onChange={(e) => updateField('expectations', e.target.value)}
+                    placeholder="Tell us briefly what you're hoping to achieve..."
+                    className="mt-2.5 w-full rounded-lg px-3.5 py-3 text-sm outline-none transition"
+                    style={inputStyle}
+                    required
+                  />
+                  {errors.expectations && <span className="mt-1 block text-xs" style={{ color: danger, ...labelFont }}>{errors.expectations}</span>}
+                </label>
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-lg px-6 py-3.5 text-sm font-semibold transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-70"
+                  style={{ background: text, color: bg }}
+                >
+                  {isSubmitting ? 'Reserving your seat…' : 'Generate My Registration Code'}
+                  <Mail className="h-4 w-4" />
+                </button>
+                <p className="text-center text-xs" style={{ color: mutedSoft }}>
+                  Your details are used only for bootcamp registration and communication. No spam.
                 </p>
-              )}
-            </form>
+              </form>
+            ) : (
+              <div className="rounded-2xl overflow-hidden" style={{ background: cardBg, border: `1px solid ${line}` }}>
+                <div
+                  className="flex flex-wrap items-center justify-between gap-3 px-7 py-5"
+                  style={{ background: isDark ? 'rgba(183,138,70,0.14)' : 'rgba(183,138,70,0.18)' }}
+                >
+                  <div className="flex items-center gap-3">
+                    <div
+                      className="flex h-7 w-7 items-center justify-center rounded-full text-sm font-bold"
+                      style={{ background: BRASS, color: bg }}
+                    >
+                      ✓
+                    </div>
+                    <h3 className="text-base font-semibold">Seat reserved — complete payment to confirm</h3>
+                  </div>
+                  <span className="text-xs" style={{ color: BRASS, ...labelFont }}>{course.title}</span>
+                </div>
+
+                <div className="space-y-1 px-7 py-6">
+                  <div className="flex justify-between border-b py-3 text-sm" style={{ borderColor: line }}>
+                    <span style={{ color: muted }}>Registered name</span>
+                    <span className="font-semibold">{form.fullName}</span>
+                  </div>
+                  <div className="flex justify-between border-b py-3 text-sm" style={{ borderColor: line }}>
+                    <span style={{ color: muted }}>Pathway</span>
+                    <span className="font-semibold">{course.title}</span>
+                  </div>
+                  <div className="flex justify-between border-b py-3 text-sm" style={{ borderColor: line }}>
+                    <span style={{ color: muted }}>Bank name</span>
+                    <span className="font-semibold" style={labelFont}>Moniepoint</span>
+                  </div>
+                  <div className="flex justify-between border-b py-3 text-sm" style={{ borderColor: line }}>
+                    <span style={{ color: muted }}>Account number</span>
+                    <span className="font-semibold" style={labelFont}>6817531903</span>
+                  </div>
+                  <div className="flex justify-between border-b py-3 text-sm" style={{ borderColor: line }}>
+                    <span style={{ color: muted }}>Account name</span>
+                    <span className="font-semibold" style={labelFont}>Rubytech Consult</span>
+                  </div>
+                  <div className="flex justify-between py-3 text-sm">
+                    <span style={{ color: muted }}>Amount to pay</span>
+                    <span className="text-base font-bold" style={{ color: BRASS, ...labelFont }}>
+                      {course.currency} {course.price.toLocaleString('en-NG')}
+                    </span>
+                  </div>
+
+                  <div
+                    className="mt-4 flex flex-wrap items-center justify-between gap-3 rounded-lg p-4"
+                    style={{ background: isDark ? 'rgba(183,138,70,0.12)' : 'rgba(183,138,70,0.16)', border: `1px dashed ${BRASS}` }}
+                  >
+                    <div>
+                      <p className="text-xs uppercase tracking-wide" style={{ color: BRASS, ...labelFont }}>
+                        Use this code as your payment narration
+                      </p>
+                      <p className="mt-1 text-xl font-bold tracking-wide" style={labelFont}>{code}</p>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => copyText(code, 'code')}
+                      className="rounded-lg px-3.5 py-2 text-xs font-semibold transition hover:opacity-80"
+                      style={{ border: `1px solid ${line}`, color: text }}
+                    >
+                      {copyStatus.code ? 'Copied!' : 'Copy code'}
+                    </button>
+                  </div>
+
+                  <p className="mt-4 rounded-lg p-3.5 text-xs leading-5" style={{ background: cardBgSoft, color: muted }}>
+                    <span style={{ color: text, fontWeight: 600 }}>Important:</span> when making your transfer, enter the code above in the narration/description field — this is how we match your payment to your registration. Keep a screenshot of your payment and this code.
+                  </p>
+
+                  {notifyFailed && (
+                    <p
+                      className="mt-3 rounded-lg p-3.5 text-xs leading-5"
+                      style={{ background: isDark ? 'rgba(183,138,70,0.12)' : 'rgba(183,138,70,0.16)', border: `1px solid ${BRASS}`, color: text }}
+                    >
+                      <span style={{ fontWeight: 600 }}>Heads up:</span> we couldn't automatically notify our team about your registration. Your details and code are still valid — please also send a screenshot of this page to be safe.
+                    </p>
+                  )}
+
+                  <div className="mt-5 flex flex-wrap gap-3">
+                    <button
+                      type="button"
+                      onClick={() =>
+                        copyText(
+                          `Bank: Moniepoint\nAccount Number: 6817531903\nAccount Name: Rubytech Consult\nAmount to Pay: ${course.currency} ${course.price.toLocaleString('en-NG')}\nNarration/Description: ${code}`,
+                          'all'
+                        )
+                      }
+                      className="rounded-lg px-4 py-2.5 text-xs font-semibold transition hover:opacity-80"
+                      style={{ border: `1px solid ${line}`, color: text }}
+                    >
+                      {copyStatus.all ? 'Copied!' : 'Copy account details'}
+                    </button>
+                    <button
+                      type="button"
+                      onClick={handleEdit}
+                      className="rounded-lg px-4 py-2.5 text-xs font-semibold transition hover:opacity-80"
+                      style={{ color: mutedSoft }}
+                    >
+                      Edit my details
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </motion.section>
       </div>

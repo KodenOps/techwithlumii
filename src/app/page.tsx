@@ -29,6 +29,7 @@ import LineIllustration from '@/components/LineIllustration';
 import Image1 from '@/assets/image1.png'
 import cover2 from '@/assets/cover2.png'
 import Image from 'next/image';
+import Link from 'next/link';
 /**
  * ---------------------------------------------------------------
  * DESIGN SYSTEM — "Quiet Signal" (v2: imagery + motion pass)
@@ -274,6 +275,10 @@ export default function LandingPage() {
                   />
                 </a>
               ))}
+              <a href="/bootcamp" className='group relative py-1 transition-opacity hover:opacity-80' style={{color: muted}}>Bootcamp <span
+                    className="absolute -bottom-0.5 left-0 h-px w-full origin-left scale-x-0 transition-transform duration-300 ease-out group-hover:scale-x-100"
+                    style={{ background: BRASS }}
+                  /></a>
             </nav>
             <button
               type="button"
@@ -429,7 +434,7 @@ export default function LandingPage() {
               </div>
               <div>
                 <p className="text-[10px] uppercase tracking-[0.2em] mb-2" style={{ color: mutedSoft, ...labelFont }}>Featured program</p>
-                <p className="text-sm font-medium" style={{ color: text }}>Breaking Into Tech Bootcamp V2 (Website Development, Devops and Data Analysis cohorts)</p>
+                <Link href="/bootcamp" className="text-sm font-medium" style={{ color: text }}>Breaking Into Tech Bootcamp V2 (Website Development, Devops and Data Analysis cohorts)</Link>
               </div>
             </div>
           </motion.div>
