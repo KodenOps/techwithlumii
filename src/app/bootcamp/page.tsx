@@ -486,7 +486,7 @@ export default function BootcampPage() {
                 <div className="row"><span className="k">Registered name</span><span className="v">{form.fullName}</span></div>
                 <div className="row"><span className="k">Pathway</span><span className="v">{form.pathway}</span></div>
                 <div className="row"><span className="k">Bank name</span><span className="v">Moniepoint</span></div>
-                <div className="row"><span className="k">Account number</span><span className="v">2345678902</span></div>
+                <div className="row"><span className="k">Account number</span><span className="v">6817531903</span></div>
                 <div className="row"><span className="k">Account name</span><span className="v">Rubytech Consult</span></div>
                 <div className="row"><span className="k">Amount to pay</span><span className="v" style={{ color: '#E8A33D' }}>{amountLabel}</span></div>
 
@@ -516,7 +516,7 @@ export default function BootcampPage() {
                     className="copy-btn"
                     onClick={() =>
                       copyText(
-                        `Bank: Moniepoint\nAccount Number: 2345678902\nAccount Name: Rubytech Consult\nAmount to Pay: ${amountLabel}\nNarration/Description: ${code}`,
+                        `Bank: Moniepoint\nAccount Number: 6817531903\nAccount Name: Rubytech Consult\nAmount to Pay: ${amountLabel}\nNarration/Description: ${code}`,
                         'all'
                       )
                     }
