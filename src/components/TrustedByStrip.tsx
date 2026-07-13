@@ -2,8 +2,8 @@ import React from "react";
 import SectionMark from "./SectionMark";
 
 function TrustedByStrip({ line, mutedSoft, labelFont }: { line: string; mutedSoft: string; labelFont: { fontFamily: string } }) {
-    const BRASS = '#B78A46';
-const trustedNames = ['QueenFizzie', 'SolutionCrest', 'Maldini & Lounge', 'Castrol Lounge', 'Bokku Mart', 'Helium Enterprises', 'Strata Labs', 'BrightLabs', 'LumiTech', 'Vortex Solutions', 'NovaCore', 'AetherWorks', 'Zenith Dynamics', 'Lumina Systems', 'Nexus Innovations'];
+
+  const trustedNames = ['Harmony Events', 'SolutionCrest', 'Maldini & Lounge', 'Castrol Lounge', 'Hydrogen Energy', 'Helium Enterprises', 'Strata Labs', 'BrightLabs', 'Glamour Events', 'Vortex Solutions', 'Primus Healthcare', 'AetherWorks', 'Zenith Dynamics', 'Lumina Systems', 'Nexus Innovations'];
 
   const items = [...trustedNames, ...trustedNames];
   return (

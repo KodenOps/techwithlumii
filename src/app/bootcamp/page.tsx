@@ -78,6 +78,7 @@ const PATHWAYS: PathwayOption[] = [
     slug: 'excel-data-analysis-bootcamp',
   },
 ];
+const BRASS = '#B78A46';
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const PHONE_RE = /^(?:\+234|0)[789][01]\d{8}$/;
@@ -220,14 +221,14 @@ export default function BootcampPage() {
     <div className={`page ${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
       <nav className="nav">
         <div className="wrap">
-          <div className="brand">Ruby<span>Tech</span></div>
+          <Link href="/"><p  className="brand"> Ruby<span>Tech</span></p></Link>
           <div className="nav-links">
             <a href="#pathways">Pathways</a>
             <a href="#why">Why RubyTech</a>
             <a href="#proof">Reviews</a>
             <a href="/">Company site</a>
           </div>
-          <a className="nav-cta" href="#register">Reserve a seat</a>
+          <a className="nav-cta" href="#register" style={{ backgroundColor: `${BRASS}`, color: '#fff' }}>Reserve a seat</a>
         </div>
       </nav>
 
