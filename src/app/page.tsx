@@ -429,8 +429,8 @@ export default function LandingPage() {
               className="absolute inset-x-4 bottom-4 flex items-center gap-3 rounded-xl px-4 py-3.5 backdrop-blur-md"
               style={{ background: isDark ? 'rgba(11,13,18,0.68)' : 'rgba(255,255,255,0.82)', border: `1px solid ${line}` }}
             >
-              <div className="flex h-10 w-14 hidden md:block items-center justify-center rounded-full" style={{ border: `1px solid ${BRASS}` }}>
-                <Users className="h-4 w-4" style={{ color: BRASS }} />
+              <div className="flex h-10 w-14 hidden md:block items-center justify-center rounded-full" style={{ border: `1px solid ${BRASS}`, backgroundColor: `${BRASS}` }}>
+                {/* <Users className="h-4 w-4 text-center" style={{ color: BRASS }} /> */}
               </div>
               <div>
                 <p className="text-[10px] uppercase tracking-[0.2em] mb-2" style={{ color: mutedSoft, ...labelFont }}>Featured program</p>
