@@ -8,8 +8,8 @@ const courseDetails = [
     id: 'web-dev-bootcamp',
     slug: 'website-development-bootcamp',
     title: 'Website Development Bootcamp',
-    subtitle: 'HTML, CSS, JavaScript, React & Next.js',
-    description: 'Learn to build modern, responsive web applications that impress recruiters and clients. Master frontend frameworks, API integration, and deployment.',
+    subtitle: 'HTML, CSS, JavaScript, AI',
+    description: 'Learn to build modern, responsive web applications that leverage AI technologies. Gain hands-on experience with HTML, CSS, JavaScript, and making use of AI to create stunning websites and web apps.',
     // heroImage: createIllustration('Web Development', '#181B22', '#2C2417'),
     heroImage: webdev,
     shortImage: createIllustration('Web Dev', '#1B1E27', '#33384A'),
@@ -30,18 +30,7 @@ const courseDetails = [
       'Expert mentorship',
       'Career guidance included',
       'Lifetime access to materials',
-      'Job placement support',
-    ],
-    
-    learningOutcomes: [
-      'Build responsive websites with HTML5 & modern CSS',
-      'Master JavaScript for interactive web apps',
-      'Create dynamic UIs with React',
-      'Deploy full-stack apps with Next.js',
-      'Integrate APIs and databases',
-      'Implement authentication & security',
-      'Optimize performance & SEO',
-      'Version control with Git',
+      'After-Training support',
     ],
     
     keySellingPoints: [
@@ -67,77 +56,143 @@ const courseDetails = [
       },
     ],
     
-    projects: [
-      {
-        name: 'Personal Portfolio Website',
-        description: 'Responsive single-page portfolio showcasing your projects and skills',
-        technologies: 'HTML, CSS, JavaScript',
-        duration: 'Week 1-2',
-      },
-      {
-        name: 'E-Commerce Product Page',
-        description: 'Interactive product page with filters, cart, and checkout UI',
-        technologies: 'React, State Management',
-        duration: 'Week 2-3',
-      },
-      {
-        name: 'Task Management App',
-        description: 'Full-featured app with CRUD operations and local storage',
-        technologies: 'React, Hooks, LocalStorage',
-        duration: 'Week 3-4',
-      },
-      {
-        name: 'Weather Dashboard',
-        description: 'Real-time weather app using public APIs and dynamic UI',
-        technologies: 'React, Fetch API, Charts',
-        duration: 'Week 4-5',
-      },
-      {
-        name: 'Blog Platform',
-        description: 'Full-stack blog with Next.js, database, and authentication',
-        technologies: 'Next.js, Database, Auth',
-        duration: 'Week 5-7',
-      },
-      {
-        name: 'SaaS Landing Page',
-        description: 'Polished, conversion-optimized landing page for a startup',
-        technologies: 'Next.js, Tailwind, Animations',
-        duration: 'Week 7-8',
-      },
-    ],
+projects: [
+  {
+    name: 'Personal Portfolio Website',
+    description: 'Responsive single-page portfolio showcasing your projects and skills',
+    technologies: 'HTML, CSS, JavaScript',
+    duration: 'Week 1-2',
+  },
+  {
+    name: 'Interactive Quiz App',
+    description: 'Multiple-choice quiz with score tracking, timer, and instant feedback',
+    technologies: 'HTML, CSS, JavaScript',
+    duration: 'Week 2',
+  },
+  {
+    name: 'To-Do List App',
+    description: 'Add, edit, delete, and mark tasks complete, saved with LocalStorage',
+    technologies: 'HTML, CSS, JavaScript, LocalStorage',
+    duration: 'Week 3',
+  },
+  {
+    name: 'Weather App',
+    description: 'Search a city and display live weather using a public API',
+    technologies: 'HTML, CSS, JavaScript, Fetch API',
+    duration: 'Week 3-4',
+  },
+  {
+    name: 'Recipe/Movie Search App',
+    description: 'Search and display results from a public API with loading and error states',
+    technologies: 'HTML, CSS, JavaScript, Fetch API',
+    duration: 'Week 4',
+  },
+  {
+    name: 'E-Commerce Product Page',
+    description: 'Interactive product page with filters, cart, and checkout UI (no real payments)',
+    technologies: 'HTML, CSS, JavaScript, LocalStorage',
+    duration: 'Week 5',
+  },
+  {
+    name: 'Expense Tracker',
+    description: 'Add/remove transactions, running balance, category filtering, saved locally',
+    technologies: 'HTML, CSS, JavaScript, LocalStorage',
+    duration: 'Week 5-6',
+  },
+{
+    name: 'Local Business Website',
+    description: 'Multi-section site for a real business type (e.g. salon, cafe, gym) with services, testimonials, gallery, and a contact form',
+    technologies: 'HTML, CSS, JavaScript',
+    duration: 'Week 6',
+  },
+  {
+    name: 'SaaS Landing Page',
+    description: 'Polished, conversion-optimized landing page with scroll animations and a signup form',
+    technologies: 'HTML, CSS, JavaScript',
+    duration: 'Week 7',
+  },
+  {
+    name: 'Final Capstone Project',
+    description: 'Build a complete website for a real business or startup, integrating all learned skills and deploying it online for public access',
+    technologies: 'HTML, CSS, JavaScript, Deployment (Netlify/GitHub Pages)',
+    duration: 'Project Week',
+  },
+],
     
-    curriculum: [
-      {
-        week: 'Week 1-2',
-        title: 'Web Fundamentals',
-        topics: ['HTML5 semantics', 'CSS layouts & flexbox', 'Responsive design', 'Git basics'],
-      },
-      {
-        week: 'Week 2-3',
-        title: 'Interactive Web',
-        topics: ['JavaScript ES6+', 'DOM manipulation', 'Events & async', 'Debugging skills'],
-      },
-      {
-        week: 'Week 3-4',
-        title: 'React Essentials',
-        topics: ['Components & JSX', 'State & props', 'Hooks', 'Component lifecycle'],
-      },
-      {
-        week: 'Week 4-5',
-        title: 'Advanced React',
-        topics: ['API integration', 'State management', 'Performance', 'Testing'],
-      },
-      {
-        week: 'Week 5-6',
-        title: 'Full-Stack Fundamentals',
-        topics: ['Next.js framework', 'Database basics', 'Backend routes', 'Deployment'],
-      },
-      {
-        week: 'Week 6-8',
-        title: 'Capstone & Career',
-        topics: ['Portfolio projects', 'Interview prep', 'Resume review', 'Job search'],
-      },
+   curriculum: [
+  {
+    week: 'Week 1',
+    title: 'HTML & CSS Foundations',
+    topics: ['HTML5 semantics', 'CSS box model & flexbox', 'CSS Grid', 'Responsive design (mobile-first)', 'Git & GitHub basics'],
+    project: 'Build and deploy a personal landing page (responsive, semantic HTML)',
+  },
+  {
+    week: 'Week 2',
+    title: 'Advanced CSS & Design Systems',
+    topics: ['CSS variables & custom properties', 'Animations & transitions', 'CSS frameworks (Tailwind)', 'Accessibility (a11y) basics', 'Reading/adapting design mockups'],
+    project: 'Clone a real-world website UI (e.g. a product page) pixel-for-pixel',
+  },
+  {
+    week: 'Week 3',
+    title: 'JavaScript Fundamentals',
+    topics: ['ES6+ syntax', 'Variables, functions, arrays/objects', 'Control flow & loops', 'DOM selection & manipulation', 'Event listeners'],
+    project: 'Interactive to-do list app with localStorage persistence',
+  },
+  {
+    week: 'Week 4',
+    title: 'JavaScript in Depth',
+    topics: ['Async JS (promises, async/await)', 'Fetch API & working with REST APIs', 'Error handling', 'Reading & debugging unfamiliar code', 'DevTools mastery'],
+    project: 'Weather app or movie search app consuming a public API',
+  },
+  {
+    week: 'Week 5',
+    title: 'Vibecoding Fundamentals',
+    topics: [
+      'What vibecoding is & when it works vs when it doesn\'t',
+      'Writing effective prompts for AI coding tools (Claude, Cursor, v0, Bolt, Lovable)',
+      'Reading AI-generated code you didn\'t write',
+      'Iterative prompting: refining, fixing, and redirecting output',
+      'Why fundamentals (Weeks 1-4) matter even when AI writes the code',
     ],
+    project: 'Vibecode a small app from a one-paragraph prompt, then manually debug 3 issues in the generated code',
+  },
+  {
+    week: 'Week 6',
+    title: 'Vibecoding Real Projects',
+    topics: [
+      'Breaking a bigger idea into prompt-sized chunks',
+      'Working across multiple files/components with an AI tool',
+      'Spotting AI mistakes: broken logic, security issues, bad practices',
+      'Version control discipline when vibecoding (commit often, diff review)',
+      'Blending hand-written code with AI-generated code',
+    ],
+    project: 'Vibecode a multi-page app (e.g. a booking site or dashboard), with at least one feature built by hand',
+  },
+  {
+    week: 'Week 7',
+    title: 'Polish, Performance & Deployment',
+    topics: ['Code organization & best practices', 'Performance optimization', 'SEO fundamentals', 'Testing your UI manually', 'Deploying (Netlify/Vercel/GitHub Pages)'],
+    project: 'Refactor and deploy your strongest project from Weeks 1-6',
+  },
+  {
+    week: 'Week 8',
+    title: 'Capstone & Career Prep',
+    topics: ['Capstone project build (vibecoded + hand-coded)', 'Portfolio site assembly', 'Resume & LinkedIn review', 'Mock interviews', 'Client/job search strategy'],
+    project: 'Capstone: a full app built using both vibecoding and manual coding, presented in a demo day',
+  },
+],
+
+learningOutcomes: [
+  'Build responsive, accessible websites with HTML5 & modern CSS',
+  'Write clean, modern JavaScript for interactive web apps',
+  'Vibecode functional apps using AI coding tools',
+  'Read, debug, and improve AI-generated code confidently',
+  'Know when to vibecode vs when to hand-write code',
+  'Optimize performance & SEO',
+  'Version control with Git and collaborate on GitHub',
+  'Deploy websites and apps live for public access',
+  'Assemble a portfolio and get interview/client-ready',
+],
     
     testimonials: [
       {
@@ -204,7 +259,7 @@ const courseDetails = [
       'Real CI/CD pipeline setup',
       'Container orchestration',
       'Live mentorship sessions',
-      'Job placement support',
+      'After-Training support',
     ],
     
     learningOutcomes: [
