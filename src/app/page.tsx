@@ -30,6 +30,7 @@ import Image1 from '@/assets/image1.png'
 import cover2 from '@/assets/cover2.png'
 import Image from 'next/image';
 import Link from 'next/link';
+import TopNav from '@/components/TopNav';
 /**
  * ---------------------------------------------------------------
  * DESIGN SYSTEM — "Quiet Signal" (v2: imagery + motion pass)
@@ -246,78 +247,20 @@ export default function LandingPage() {
       />
 
       <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col px-6 py-6 lg:px-8">
-        {/* HEADER */}
-        <header
-          className="sticky top-0 z-50 mb-2 flex items-center justify-between border-b py-5 backdrop-blur-md"
-          style={{ borderColor: line, background: isDark ? 'rgba(11,13,18,0.82)' : 'rgba(250,249,246,0.86)' }}
-        >
-          <div className="flex items-baseline gap-2">
-            {/* LOGO */}
-            <h1 className="text-xl" style={{ ...displayFont, fontStyle: 'italic' }}>RubyTech</h1>
-            <span className="hidden text-[11px] uppercase tracking-[0.24em] sm:inline" style={{ color: mutedSoft, ...labelFont }}>
-              RC-9666355
-            </span>
-          </div>
-
-          <div className="flex items-center gap-2 sm:gap-6">
-            <nav className="hidden items-center gap-8 text-[13px] font-medium md:flex">
-              {navItems.map((item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className="group relative py-1 transition-opacity hover:opacity-80"
-                  style={{ color: muted }}
-                >
-                  {item}
-                  <span
-                    className="absolute -bottom-0.5 left-0 h-px w-full origin-left scale-x-0 transition-transform duration-300 ease-out group-hover:scale-x-100"
-                    style={{ background: BRASS }}
-                  />
-                </a>
-              ))}
-              <a href="/bootcamp" className='group relative py-1 transition-opacity hover:opacity-80' style={{color: muted}}>Bootcamp <span
-                    className="absolute -bottom-0.5 left-0 h-px w-full origin-left scale-x-0 transition-transform duration-300 ease-out group-hover:scale-x-100"
-                    style={{ background: BRASS }}
-                  /></a>
-            </nav>
-            <button
-              type="button"
-              onClick={() => setTheme(isDark ? 'light' : 'dark')}
-              className="rounded-full p-2 transition hover:opacity-70"
-              style={{ border: `1px solid ${line}`, color: text }}
-              aria-label="Toggle color theme"
-            >
-              {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-            </button>
-            <button
-              type="button"
-              onClick={() => setMobileMenuOpen((open) => !open)}
-              className="rounded-full p-2 md:hidden"
-              style={{ border: `1px solid ${line}`, color: text }}
-              aria-label="Toggle navigation"
-            >
-              {mobileMenuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
-            </button>
-          </div>
-        </header>
-
-        {mobileMenuOpen ? (
-          <div className="mb-4 border-b py-4 md:hidden" style={{ borderColor: line }}>
-            <div className="flex flex-col gap-1 text-sm">
-              {navItems.map((item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className="rounded-lg px-2 py-2.5 transition hover:opacity-70"
-                  style={{ color: muted }}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item}
-                </a>
-              ))}
-            </div>
-          </div>
-        ) : null}
+       {/* NAV */}
+       <TopNav
+  isDark={isDark}
+  theme={theme}
+  setTheme={setTheme}
+  mobileMenuOpen={mobileMenuOpen}
+  setMobileMenuOpen={setMobileMenuOpen}
+  line={line}
+  text={text}
+  muted={muted}
+  mutedSoft={mutedSoft}
+  displayFont={displayFont}
+  labelFont={labelFont}
+/>
 
         {/* HERO */}
         <section id="home" ref={heroRef} className="grid gap-14 pt-4 pb-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:py-24">

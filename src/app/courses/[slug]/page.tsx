@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import courseDetails from '@/app/data/courseDetails';
 import Image from 'next/image';
+import TopNav from '@/components/TopNav';
 
 const BRASS = '#B78A46';
 
@@ -188,6 +189,8 @@ export default function CoursePage({ params }: CoursePageProps) {
   const danger = isDark ? '#F5A3A3' : '#C0392B';
   const displayFont = { fontFamily: "'Fraunces', Georgia, serif" };
   const labelFont = { fontFamily: "'IBM Plex Mono', monospace" };
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
 
   const inputStyle: React.CSSProperties = {
     border: `1px solid ${line}`,
@@ -203,7 +206,7 @@ export default function CoursePage({ params }: CoursePageProps) {
       `}</style>
 
       {/* HEADER */}
-      <header
+      {/* <header
         className="sticky top-0 z-50 flex items-center justify-between border-b px-6 py-5 backdrop-blur-md lg:px-8"
         style={{ borderColor: line, background: isDark ? 'rgba(11,13,18,0.82)' : 'rgba(250,249,246,0.86)' }}
       >
@@ -218,8 +221,24 @@ export default function CoursePage({ params }: CoursePageProps) {
         >
           {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
         </button>
-      </header>
+      </header> */}
+           {/* NAV */}
+                 <div className="relative z-10 mx-auto flex  max-w-7xl flex-col px-6 py-6 lg:px-8">
 
+             <TopNav
+        isDark={isDark}
+        theme={theme}
+        setTheme={setTheme}
+        mobileMenuOpen={mobileMenuOpen}
+        setMobileMenuOpen={setMobileMenuOpen}
+        line={line}
+        text={text}
+        muted={muted}
+        mutedSoft={mutedSoft}
+        displayFont={displayFont}
+        labelFont={labelFont}
+      />
+</div>
       <div className="mx-auto md:max-w-6xl w-full px-4 md:px-6 py-8 lg:px-8 lg:py-12">
         {/* HERO */}
         <motion.section
