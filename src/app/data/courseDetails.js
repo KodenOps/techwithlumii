@@ -390,7 +390,7 @@ learningOutcomes: [
       },
       {
         question: 'Is there an AWS cost?',
-        answer: 'We provide AWS free tier credits to all students. Some advanced labs may cost $5-10 out of pocket.',
+        answer: 'The labs we will be doing will be terminated almost immediately and the total acrued cost will be less than $3',
       },
       {
         question: 'What jobs can I get after?',
@@ -398,10 +398,10 @@ learningOutcomes: [
       },
       {
         question: 'How long until I\'m job-ready?',
-        answer: 'Most students can land interviews within 4-6 weeks of completion with proper networking.',
+        answer: 'This bootcamp is designed to make you comfortable with DevOps fundamentals. With consistent practice post-bootcamp, you can be job-ready in 3-6 months. Also, there is opportunity for mentorship after bootcamp to further help in landing your first role',
       },
       {
-        question: 'Is it only for tech backgrounds?',
+        question: 'Is it only for those with tech backgrounds already?',
         answer: 'Not at all. We have students from non-tech backgrounds who became successful DevOps engineers.',
       },
     ],
