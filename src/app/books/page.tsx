@@ -24,7 +24,7 @@ const jetbrainsMono = JetBrains_Mono({
   variable: '--font-mono',
 });
 
-const BRASS = '#B78A46';
+const BRASS = '#779cea';
 
 export default function BooksPage() {
   const [activeBook, setActiveBook] = useState<Book | null>(null);
@@ -201,7 +201,7 @@ export default function BooksPage() {
           --ink-line: #2a323e;
           --cloud: #f1f1ec;
           --cloud-dim: #c9cbc2;
-          --data: #e8a33d;
+          --data: #779cea;
           --data-dim: #3a2a12;
           --radius: 14px;
           --display: var(--font-display), sans-serif;
