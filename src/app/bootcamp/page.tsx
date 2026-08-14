@@ -78,7 +78,7 @@ const PATHWAYS: PathwayOption[] = [
     slug: 'excel-data-analysis-bootcamp',
   },
 ];
-const BRASS = '#B78A46';
+const BRASS = '#779cea';
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const PHONE_RE = /^(?:\+234|0)[789][01]\d{8}$/;
@@ -257,7 +257,7 @@ export default function BootcampPage() {
               <div className="mark" style={{ left: '50%' }} />
               <div className="mark" style={{ left: '98%' }} />
               <svg className="plane" width="26" height="20" viewBox="0 0 24 24" fill="none">
-                <path d="M2 16l19-6-9-3-3-9-2 6-6 2 4 2z" fill="#E8A33D" />
+                <path d="M2 16l19-6-9-3-3-9-2 6-6 2 4 2z" fill={BRASS} />
               </svg>
             </div>
             <div className="runway-labels"><span>WEEK 1 · TAKEOFF</span><span>WEEK 4 · BUILD</span><span>WEEK 8 · LAUNCH</span></div>
@@ -489,7 +489,7 @@ export default function BootcampPage() {
                 <div className="row"><span className="k">Bank name</span><span className="v">Moniepoint</span></div>
                 <div className="row"><span className="k">Account number</span><span className="v">6817531903</span></div>
                 <div className="row"><span className="k">Account name</span><span className="v">Rubytech Consult</span></div>
-                <div className="row"><span className="k">Amount to pay</span><span className="v" style={{ color: '#E8A33D' }}>{amountLabel}</span></div>
+                <div className="row"><span className="k">Amount to pay</span><span className="v" style={{ color: BRASS }}>{amountLabel}</span></div>
 
                 <div className="code-box">
                   <div>
@@ -556,7 +556,7 @@ export default function BootcampPage() {
           --web-dim: #1e2a66;
           --devops: #679875;
           --devops-dim: #233329;
-          --data: #e8a33d;
+          --data: #779cea;
           --data-dim: #3a2a12;
           --danger: #e85d5d;
           --radius: 14px;

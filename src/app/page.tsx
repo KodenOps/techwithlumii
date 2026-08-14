@@ -46,7 +46,7 @@ import TopNav from '@/components/TopNav';
  * ---------------------------------------------------------------
  */
 
-const BRASS = '#B78A46';
+const BRASS = '#779cea';
 // Navigation Links - 
 const navItems = ['Home', 'About', 'Courses', 'Services', 'Testimonials', 'Contact'];
 

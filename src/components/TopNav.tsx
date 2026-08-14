@@ -25,7 +25,7 @@ interface TopNavProps {
   displayFont: CSSProperties;
   labelFont: CSSProperties;
 }
-const BRASS = '#B78A46';
+const BRASS = '#779cea';
 
 export default function TopNav({
   isDark,
