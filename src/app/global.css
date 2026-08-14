@@ -26,6 +26,7 @@ html.dark {
   --border: rgba(255, 255, 255, 0.1);
 }
 
+
 body {
   @apply antialiased;
   background-color: var(--bg);

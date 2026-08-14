@@ -474,7 +474,7 @@ export default function BootcampPage() {
                 <button type="submit" className="submit-btn" disabled={isSubmitting}>
                   {isSubmitting ? 'Reserving your seat…' : 'Generate My Registration Code →'}
                 </button>
-                <p className="privacy-note">Your details are used only for bootcamp registration and communication. No spam.</p>
+                <p className="privacy-note pt-4">Your details are used only for bootcamp registration and communication. No spam.</p>
               </form>
             </div>
           ) : (
