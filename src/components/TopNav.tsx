@@ -3,16 +3,28 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-import { ArrowUpRight, Menu, Moon, Sun, X } from 'lucide-react';
+import {
+  ArrowUpRight,
+  BookOpen,
+  Building2,
+  GraduationCap,
+  LayoutGrid,
+  Library,
+  Mail,
+  Menu,
+  Moon,
+  Sun,
+  X,
+} from 'lucide-react';
 import { useSiteTheme } from '@/lib/useSiteTheme';
 
 const links = [
-  { label: 'Services', href: '/#services' },
-  { label: 'Bootcamp', href: '/bootcamp' },
-  { label: 'Courses', href: '/#courses' },
-  { label: 'Books', href: '/books' },
-  { label: 'Company', href: '/#about' },
-  { label: 'Contact', href: '/#contact' },
+  { label: 'Services', href: '/#services', icon: LayoutGrid },
+  { label: 'Bootcamp', href: '/bootcamp', icon: GraduationCap },
+  { label: 'Courses', href: '/#courses', icon: BookOpen },
+  { label: 'Books', href: '/books', icon: Library },
+  { label: 'Company', href: '/#about', icon: Building2 },
+  { label: 'Contact', href: '/#contact', icon: Mail },
 ];
 
 export default function TopNav() {
@@ -92,25 +104,36 @@ export default function TopNav() {
           </div>
 
           {open && (
-            <nav className="border-t border-[var(--line)] px-3 pb-3 pt-2 lg:hidden" aria-label="Mobile">
-              {links.map((link) => (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  onClick={() => setOpen(false)}
-                  className="block rounded-xl px-3 py-3 text-sm font-medium text-[var(--muted)] transition-colors hover:bg-[var(--surface-2)] hover:text-[var(--ink)]"
-                >
-                  {link.label}
-                </Link>
-              ))}
-              <Link
-                href="/bootcamp#register"
-                onClick={() => setOpen(false)}
-                className="btn btn-primary mt-2 w-full"
+            <div className="px-3 pb-3 lg:hidden">
+              <nav
+                className="rounded-[1.4rem] border border-[var(--line)] bg-[var(--surface)] p-2 shadow-[0_26px_50px_-30px_rgba(8,20,44,0.85)]"
+                aria-label="Mobile"
               >
-                Enrol now
-              </Link>
-            </nav>
+                {links.map((link) => {
+                  const Icon = link.icon;
+                  return (
+                    <Link
+                      key={link.label}
+                      href={link.href}
+                      onClick={() => setOpen(false)}
+                      className="flex items-center gap-3 rounded-[0.9rem] px-2.5 py-2.5 text-sm font-semibold text-[var(--ink)] transition-colors hover:bg-[var(--surface-2)]"
+                    >
+                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[0.7rem] bg-[var(--brand-soft)] text-[var(--brand)]">
+                        <Icon className="h-4 w-4" />
+                      </span>
+                      {link.label}
+                    </Link>
+                  );
+                })}
+                <Link
+                  href="/bootcamp#register"
+                  onClick={() => setOpen(false)}
+                  className="btn btn-primary mt-2 w-full"
+                >
+                  Enrol now
+                </Link>
+              </nav>
+            </div>
           )}
         </div>
       </div>
