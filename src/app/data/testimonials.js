@@ -1,4 +1,3 @@
-import createAvatar from "@/components/createAvater"
 import Avatar from "@/assets/avatar.png"
 import Avatar2 from "@/assets/avatar2.png"
 import Avatar3 from "@/assets/avatar3.png"

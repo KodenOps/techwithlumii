@@ -1,191 +1,119 @@
 'use client';
 
 import Link from 'next/link';
-import { Menu, Moon, Sun, X } from 'lucide-react';
-import { Dispatch, SetStateAction, CSSProperties } from 'react';
+import { usePathname } from 'next/navigation';
+import { useState } from 'react';
+import { ArrowUpRight, Menu, Moon, Sun, X } from 'lucide-react';
+import { useSiteTheme } from '@/lib/useSiteTheme';
 
-const navItems = [
-  'Home',
-  'About',
-  'Courses',
-  'Services',
-  'Testimonials',
-  'Contact',
+const links = [
+  { label: 'Services', href: '/#services' },
+  { label: 'Bootcamp', href: '/bootcamp' },
+  { label: 'Courses', href: '/#courses' },
+  { label: 'Books', href: '/books' },
+  { label: 'Company', href: '/#about' },
+  { label: 'Contact', href: '/#contact' },
 ];
-interface TopNavProps {
-  isDark: boolean;
-  theme: 'light' | 'dark';
-  setTheme: Dispatch<SetStateAction<'light' | 'dark'>>;
-  mobileMenuOpen: boolean;
-  setMobileMenuOpen: Dispatch<SetStateAction<boolean>>;
-  line: string;
-  text: string;
-  muted: string;
-  mutedSoft: string;
-  displayFont: CSSProperties;
-  labelFont: CSSProperties;
-}
-const BRASS = '#779cea';
 
-export default function TopNav({
-  isDark,
-  theme,
-  setTheme,
-  mobileMenuOpen,
-  setMobileMenuOpen,
-  line,
-  text,
-  muted,
-  mutedSoft,
-  displayFont,
-  labelFont,
-}: TopNavProps) {
+export default function TopNav() {
+  const { isDark, toggle } = useSiteTheme();
+  const pathname = usePathname();
+  const [open, setOpen] = useState(false);
+
   return (
-    <div className="">
-      <header
-        className="sticky top-0 z-50 mb-2 px-2 flex items-center justify-between border-b py-5 backdrop-blur-md"
-        style={{
-          borderColor: line,
-          background: isDark
-            ? 'rgba(11,13,18,0.82)'
-            : 'rgba(250,249,246,0.86)',
-        }}
-      >
-        {/* Logo */}
-        <div className="flex items-baseline gap-2">
-          <Link href="/" className="text-xl" style={{ ...displayFont, fontStyle: 'italic' }}>
-            RubyTech
-          </Link>
+    <header className="sticky top-0 z-50">
+      <div className="shell pt-3 sm:pt-4">
+        <div className="rounded-[1.75rem] border border-[var(--line)] bg-[var(--surface)]/90 shadow-[0_18px_40px_-34px_rgba(8,20,44,0.8)] backdrop-blur-md">
+          <div className="flex h-16 items-center justify-between gap-4 px-3 sm:px-4">
+            <Link href="/" className="flex items-center gap-2.5 pl-1" aria-label="RubyTech home">
+              <span className="flex h-9 w-9 items-center justify-center rounded-[0.7rem] bg-[var(--brand)] font-display text-[15px] font-bold text-[var(--on-brand)]">
+                R
+              </span>
+              <span className="leading-tight">
+                <span className="block font-display text-[1.05rem] font-bold tracking-[-0.03em]">
+                  RubyTech
+                </span>
+                <span className="block text-[9px] font-semibold uppercase tracking-[0.18em] text-[var(--faint)]">
+                  Consult &amp; Outsourcing
+                </span>
+              </span>
+            </Link>
 
-          <span
-            className="hidden text-[11px] uppercase tracking-[0.24em] sm:inline"
-            style={{ color: mutedSoft, ...labelFont }}
-          >
-            RC-9666355
-          </span>
-        </div>
+            <nav
+              className="hidden items-center gap-1 rounded-full bg-[var(--surface-2)] p-1 lg:flex"
+              aria-label="Main"
+            >
+              {links.map((link) => {
+                const active = link.href === pathname;
+                return (
+                  <Link
+                    key={link.label}
+                    href={link.href}
+                    className={`rounded-full px-3.5 py-2 text-[0.8125rem] font-medium transition-colors ${
+                      active
+                        ? 'bg-[var(--surface)] text-[var(--ink)] shadow-sm'
+                        : 'text-[var(--muted)] hover:text-[var(--ink)]'
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
+            </nav>
 
-        {/* Desktop Navigation */}
-        <div className="flex items-center gap-2 sm:gap-6">
-          <nav className="hidden items-center gap-8 text-[13px] font-medium md:flex">
-            {navItems.map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="group relative py-1 transition-opacity hover:opacity-80"
-                style={{ color: muted }}
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                onClick={toggle}
+                aria-label={isDark ? 'Switch to light theme' : 'Switch to dark theme'}
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-[var(--line)] text-[var(--muted)] transition-colors hover:border-[var(--line-strong)] hover:text-[var(--ink)]"
               >
-                {item}
+                {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+              </button>
 
-                <span
-                  className="absolute -bottom-0.5 left-0 h-px w-full origin-left scale-x-0 transition-transform duration-300 ease-out group-hover:scale-x-100"
-                  style={{ background: BRASS }}
-                />
-              </a>
-            ))}
-
-            <Link
-              href="/bootcamp"
-              className="group relative py-1 transition-opacity hover:opacity-80"
-              style={{ color: muted }}
-            >
-              Bootcamp
-
-              <span
-                className="absolute -bottom-0.5 left-0 h-px w-full origin-left scale-x-0 transition-transform duration-300 ease-out group-hover:scale-x-100"
-                style={{ background: BRASS }}
-              />
-            </Link>
-
-            <Link
-              href="/books"
-              className="group relative py-1 transition-opacity hover:opacity-80"
-              style={{ color: muted }}
-            >
-              Books
-
-              <span
-                className="absolute -bottom-0.5 left-0 h-px w-full origin-left scale-x-0 transition-transform duration-300 ease-out group-hover:scale-x-100"
-                style={{ background: BRASS }}
-              />
-            </Link>
-          </nav>
-
-          {/* Theme Toggle */}
-          <button
-            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-            className="rounded-full p-2 transition hover:opacity-70"
-            style={{
-              border: `1px solid ${line}`,
-              color: text,
-            }}
-            aria-label="Toggle Theme"
-          >
-            {isDark ? (
-              <Sun className="h-4 w-4" />
-            ) : (
-              <Moon className="h-4 w-4" />
-            )}
-          </button>
-
-          {/* Mobile Menu */}
-          <button
-            onClick={() => setMobileMenuOpen((v) => !v)}
-            className="rounded-full p-2 md:hidden"
-            style={{
-              border: `1px solid ${line}`,
-              color: text,
-            }}
-            aria-label="Toggle Menu"
-          >
-            {mobileMenuOpen ? (
-              <X className="h-4 w-4" />
-            ) : (
-              <Menu className="h-4 w-4" />
-            )}
-          </button>
-        </div>
-      </header>
-
-      {/* Mobile Navigation */}
-      {mobileMenuOpen && (
-        <div
-          className="mb-4 border-b py-4 md:hidden"
-          style={{ borderColor: line }}
-        >
-          <div className="flex flex-col gap-1 text-sm">
-            {navItems.map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="rounded-lg px-2 py-2.5 transition hover:opacity-70"
-                style={{ color: muted }}
-                onClick={() => setMobileMenuOpen(false)}
+              <Link
+                href="/bootcamp#register"
+                className="btn btn-primary hidden h-9 px-4 text-[13px] sm:inline-flex"
               >
-                {item}
-              </a>
-            ))}
+                Enrol now
+                <ArrowUpRight className="h-3.5 w-3.5" />
+              </Link>
 
-            <Link
-              href="/bootcamp"
-              className="rounded-lg px-2 py-2.5 transition hover:opacity-70"
-              style={{ color: muted }}
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Bootcamp
-            </Link>
-
-            <Link
-              href="/books"
-              className="rounded-lg px-2 py-2.5 transition hover:opacity-70"
-              style={{ color: muted }}
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Books
-            </Link>
+              <button
+                type="button"
+                onClick={() => setOpen((value) => !value)}
+                aria-label={open ? 'Close menu' : 'Open menu'}
+                aria-expanded={open}
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-[var(--line)] text-[var(--ink)] transition-colors hover:border-[var(--line-strong)] lg:hidden"
+              >
+                {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+              </button>
+            </div>
           </div>
+
+          {open && (
+            <nav className="border-t border-[var(--line)] px-3 pb-3 pt-2 lg:hidden" aria-label="Mobile">
+              {links.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className="block rounded-xl px-3 py-3 text-sm font-medium text-[var(--muted)] transition-colors hover:bg-[var(--surface-2)] hover:text-[var(--ink)]"
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <Link
+                href="/bootcamp#register"
+                onClick={() => setOpen(false)}
+                className="btn btn-primary mt-2 w-full"
+              >
+                Enrol now
+              </Link>
+            </nav>
+          )}
         </div>
-      )}
-    </div>
+      </div>
+    </header>
   );
 }

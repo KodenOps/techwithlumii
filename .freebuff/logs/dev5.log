@@ -1,0 +1,30 @@
+
+> techwithlumi@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.15
+  - Local:        http://localhost:3300
+
+ ✓ Starting...
+ ✓ Ready in 10.6s
+ ○ Compiling / ...
+ ✓ Compiled / in 13.8s (1335 modules)
+ GET / 200 in 2436ms
+ GET / 200 in 146ms
+ ○ Compiling /bootcamp ...
+ ✓ Compiled /bootcamp in 11.5s (1355 modules)
+ GET /bootcamp 200 in 11929ms
+ ○ Compiling /books ...
+ ✓ Compiled /books in 800ms (1355 modules)
+ GET /books 200 in 963ms
+ ○ Compiling /courses/[slug] ...
+ ✓ Compiled /courses/[slug] in 989ms (1367 modules)
+ GET /courses/website-development-bootcamp 200 in 2062ms
+ GET /courses/devops-beginner-bootcamp 200 in 129ms
+ GET /courses/excel-data-analysis-bootcamp 200 in 86ms
+ GET / 200 in 207ms
+ GET / 200 in 175ms
+ GET / 200 in 107ms
+ GET /books 200 in 70ms
+ GET / 200 in 93ms
+ GET / 200 in 79ms

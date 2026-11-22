@@ -4,17 +4,27 @@ export default {
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
+      fontFamily: {
+        display: ['var(--font-display)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-body)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      },
       colors: {
         brand: {
-          50: '#f5f7ff',
-          100: '#e8edff',
-          500: '#5b6cff',
-          600: '#4a5be8',
-          700: '#3747bb',
+          DEFAULT: 'var(--brand)',
+          deep: 'var(--brand-deep)',
+          soft: 'var(--brand-soft)',
         },
+        navy: 'var(--navy)',
+        ink: 'var(--ink)',
+        line: 'var(--line)',
+        surface: 'var(--surface)',
+        canvas: 'var(--bg)',
       },
-      boxShadow: {
-        glow: '0 0 0 1px rgba(255,255,255,0.05), 0 20px 80px rgba(91,108,255,0.28)',
+      borderRadius: {
+        sheet: '1.5rem',
+      },
+      maxWidth: {
+        shell: '84rem',
       },
     },
   },

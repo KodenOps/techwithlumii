@@ -1,0 +1,1073 @@
+
+> techwithlumi@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.15
+  - Local:        http://localhost:32791
+
+ ✓ Starting...
+ ✓ Ready in 3.4s
+ ○ Compiling / ...
+ ✓ Compiled / in 13.1s (1326 modules)
+ GET / 200 in 13967ms
+ GET / 200 in 99ms
+ GET / 200 in 72ms
+ ✓ Compiled in 2.1s (1326 modules)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled in 5.6s (1355 modules)
+ GET / 200 in 995ms
+ ✓ Compiled in 640ms (678 modules)
+ ✓ Compiled in 608ms (1337 modules)
+ ✓ Compiled in 666ms (1329 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 2.8s (1335 modules)
+Warning: React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+    at LandingPage (webpack-internal:///(ssr)/./src/app/page.tsx:150:78)
+    at ClientPageRoot (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/client-page.js:14:11)
+    at Lazy
+    at InnerLayoutRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:242:11)
+    at RedirectErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9)
+    at RedirectBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:81:11)
+    at NotFoundErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/not-found-boundary.js:76:9)
+    at NotFoundBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/not-found-boundary.js:84:11)
+    at LoadingBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:347:11)
+    at ErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:158:11)
+    at InnerScrollAndFocusHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:153:9)
+    at ScrollAndFocusHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:228:11)
+    at RenderFromTemplateContext (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/render-from-template-context.js:16:44)
+    at Lazy
+    at OuterLayoutRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:367:11)
+    at Lazy
+    at body
+    at html
+    at RedirectErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9)
+    at RedirectBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:81:11)
+    at ReactDevOverlay (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/ReactDevOverlay.js:87:9)
+    at HotReload (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:322:11)
+    at Router (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:202:11)
+    at ErrorBoundaryHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:112:9)
+    at ErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:158:11)
+    at AppRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:564:13)
+    at Lazy
+    at r6 (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:19009)
+    at r6 (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:19009)
+    at ServerInsertedHTMLProvider (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:24756)
+Warning: React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+    at LandingPage (webpack-internal:///(ssr)/./src/app/page.tsx:150:78)
+    at ClientPageRoot (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/client-page.js:14:11)
+    at Lazy
+    at InnerLayoutRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:242:11)
+    at RedirectErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9)
+    at RedirectBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:81:11)
+    at NotFoundErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/not-found-boundary.js:76:9)
+    at NotFoundBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/not-found-boundary.js:84:11)
+    at LoadingBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:347:11)
+    at ErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:158:11)
+    at InnerScrollAndFocusHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:153:9)
+    at ScrollAndFocusHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:228:11)
+    at RenderFromTemplateContext (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/render-from-template-context.js:16:44)
+    at Lazy
+    at OuterLayoutRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:367:11)
+    at Lazy
+    at body
+    at html
+    at RedirectErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9)
+    at RedirectBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:81:11)
+    at ReactDevOverlay (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/ReactDevOverlay.js:87:9)
+    at HotReload (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:322:11)
+    at Router (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:202:11)
+    at ErrorBoundaryHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:112:9)
+    at ErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:158:11)
+    at AppRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:564:13)
+    at Lazy
+    at r6 (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:19009)
+    at r6 (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:19009)
+    at ServerInsertedHTMLProvider (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:24756)
+Warning: React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+    at LandingPage (webpack-internal:///(ssr)/./src/app/page.tsx:150:78)
+    at ClientPageRoot (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/client-page.js:14:11)
+    at Lazy
+    at InnerLayoutRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:242:11)
+    at RedirectErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9)
+    at RedirectBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:81:11)
+    at NotFoundErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/not-found-boundary.js:76:9)
+    at NotFoundBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/not-found-boundary.js:84:11)
+    at LoadingBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:347:11)
+    at ErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:158:11)
+    at InnerScrollAndFocusHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:153:9)
+    at ScrollAndFocusHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:228:11)
+    at RenderFromTemplateContext (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/render-from-template-context.js:16:44)
+    at Lazy
+    at OuterLayoutRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:367:11)
+    at Lazy
+    at body
+    at html
+    at RedirectErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9)
+    at RedirectBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:81:11)
+    at ReactDevOverlay (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/ReactDevOverlay.js:87:9)
+    at HotReload (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:322:11)
+    at Router (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:202:11)
+    at ErrorBoundaryHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:112:9)
+    at ErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:158:11)
+    at AppRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:564:13)
+    at Lazy
+    at r6 (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:19009)
+    at r6 (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:19009)
+    at ServerInsertedHTMLProvider (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:24756)
+Warning: React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+    at LandingPage (webpack-internal:///(ssr)/./src/app/page.tsx:150:78)
+    at ClientPageRoot (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/client-page.js:14:11)
+    at Lazy
+    at InnerLayoutRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:242:11)
+    at RedirectErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9)
+    at RedirectBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:81:11)
+    at NotFoundErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/not-found-boundary.js:76:9)
+    at NotFoundBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/not-found-boundary.js:84:11)
+    at LoadingBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:347:11)
+    at ErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:158:11)
+    at InnerScrollAndFocusHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:153:9)
+    at ScrollAndFocusHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:228:11)
+    at RenderFromTemplateContext (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/render-from-template-context.js:16:44)
+    at Lazy
+    at OuterLayoutRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:367:11)
+    at Lazy
+    at body
+    at html
+    at RedirectErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9)
+    at RedirectBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:81:11)
+    at ReactDevOverlay (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/ReactDevOverlay.js:87:9)
+    at HotReload (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:322:11)
+    at Router (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:202:11)
+    at ErrorBoundaryHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:112:9)
+    at ErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:158:11)
+    at AppRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:564:13)
+    at Lazy
+    at r6 (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:19009)
+    at r6 (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:19009)
+    at ServerInsertedHTMLProvider (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:24756)
+Warning: React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+    at LandingPage (webpack-internal:///(ssr)/./src/app/page.tsx:150:78)
+    at ClientPageRoot (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/client-page.js:14:11)
+    at Lazy
+    at InnerLayoutRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:242:11)
+    at RedirectErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9)
+    at RedirectBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:81:11)
+    at NotFoundErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/not-found-boundary.js:76:9)
+    at NotFoundBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/not-found-boundary.js:84:11)
+    at LoadingBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:347:11)
+    at ErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:158:11)
+    at InnerScrollAndFocusHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:153:9)
+    at ScrollAndFocusHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:228:11)
+    at RenderFromTemplateContext (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/render-from-template-context.js:16:44)
+    at Lazy
+    at OuterLayoutRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:367:11)
+    at Lazy
+    at body
+    at html
+    at RedirectErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9)
+    at RedirectBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:81:11)
+    at ReactDevOverlay (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/ReactDevOverlay.js:87:9)
+    at HotReload (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:322:11)
+    at Router (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:202:11)
+    at ErrorBoundaryHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:112:9)
+    at ErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:158:11)
+    at AppRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:564:13)
+    at Lazy
+    at r6 (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:19009)
+    at r6 (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:19009)
+    at ServerInsertedHTMLProvider (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:24756)
+Warning: React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+    at LandingPage (webpack-internal:///(ssr)/./src/app/page.tsx:150:78)
+    at ClientPageRoot (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/client-page.js:14:11)
+    at Lazy
+    at InnerLayoutRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:242:11)
+    at RedirectErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9)
+    at RedirectBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:81:11)
+    at NotFoundErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/not-found-boundary.js:76:9)
+    at NotFoundBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/not-found-boundary.js:84:11)
+    at LoadingBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:347:11)
+    at ErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:158:11)
+    at InnerScrollAndFocusHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:153:9)
+    at ScrollAndFocusHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:228:11)
+    at RenderFromTemplateContext (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/render-from-template-context.js:16:44)
+    at Lazy
+    at OuterLayoutRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:367:11)
+    at Lazy
+    at body
+    at html
+    at RedirectErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9)
+    at RedirectBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:81:11)
+    at ReactDevOverlay (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/ReactDevOverlay.js:87:9)
+    at HotReload (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:322:11)
+    at Router (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:202:11)
+    at ErrorBoundaryHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:112:9)
+    at ErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:158:11)
+    at AppRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:564:13)
+    at Lazy
+    at r6 (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:19009)
+    at r6 (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:19009)
+    at ServerInsertedHTMLProvider (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:24756)
+ ⨯ Internal error: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+    at aw (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:46775)
+    at a_ (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:49776)
+    at aj (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:53793)
+    at /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:42336
+    at aw (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:42822)
+    at a_ (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:49776)
+    at aj (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:53793)
+    at aC (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:52874)
+    at a_ (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:50095)
+    at aj (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:53793)
+    at /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:42336
+    at aw (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:42822)
+    at a_ (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:49776)
+    at aj (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:53793)
+    at aC (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:52874)
+    at a_ (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:50095)
+    at aj (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:53793)
+    at /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:42336
+    at aw (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:42822)
+    at a_ (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:49776)
+    at aj (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:53793)
+    at aC (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:52874)
+    at a_ (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:50095)
+    at aw (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:45321)
+    at a_ (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:49776)
+    at ab (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:11808)
+    at aw (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:44769)
+    at a_ (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:49776)
+    at aj (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:53793)
+    at aC (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:52874)
+    at a_ (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:50095)
+    at aj (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:53793)
+    at /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:42336
+    at aw (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:42822)
+    at a_ (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:49776)
+    at aj (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:53793)
+    at aC (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:52874)
+    at a_ (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:50095)
+    at aw (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:45321)
+    at a_ (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:49776)
+    at ab (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:11808)
+    at aw (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:44769)
+    at a_ (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:49776)
+    at aj (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:53793)
+    at aC (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:52874)
+    at a_ (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:50095)
+    at aj (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:53793)
+    at /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:42336
+    at aw (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:42822)
+    at a_ (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:49776)
+digest: "3134307983"
+ GET / 500 in 3314ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 4s (1319 modules)
+ GET / 200 in 1834ms
+ GET / 200 in 562ms
+ ○ Compiling /bootcamp ...
+request to https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap failed, reason: 
+
+Retrying 1/3...
+request to https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap failed, reason: 
+
+Retrying 1/3...
+request to https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap failed, reason: 
+
+Retrying 1/3...
+request to https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap failed, reason: 
+
+Retrying 2/3...
+request to https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap failed, reason: 
+
+Retrying 2/3...
+request to https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap failed, reason: 
+
+Retrying 2/3...
+request to https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap failed, reason: 
+
+Retrying 3/3...
+request to https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap failed, reason: 
+
+Retrying 3/3...
+request to https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap failed, reason: 
+
+Retrying 3/3...
+FetchError: request to https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap failed, reason: 
+    at ClientRequest.<anonymous> (/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/node-fetch/index.js:1:66160)
+    at ClientRequest.emit (node:events:509:28)
+    at emitErrorEvent (node:_http_client:109:11)
+    at TLSSocket.socketErrorListener (node:_http_client:593:5)
+    at TLSSocket.emit (node:events:509:28)
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  type: 'system',
+  errno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT'
+}
+ ⨯ Failed to download `Space Grotesk` from Google Fonts. Using fallback font instead.
+
+Failed to fetch `Space Grotesk` from Google Fonts.}
+ ✓ Compiled /bootcamp in 8.3s (1376 modules)
+ ✓ Compiled in 824ms (691 modules)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled in 3s (1357 modules)
+ GET /bootcamp 200 in 1787ms
+ ✓ Compiled in 788ms (687 modules)
+ ✓ Compiled in 3.4s (1355 modules)
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 613ms (1344 modules)
+ GET /bootcamp 200 in 316ms
+ GET /_next/static/css/app/layout.css?v=1795355371861 404 in 71ms
+ GET /_next/static/chunks/main-app.js?v=1795355371861 404 in 88ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 87ms
+ ✓ Compiled in 683ms (686 modules)
+ ✓ Compiled in 394ms (686 modules)
+ ✓ Compiled in 347ms (686 modules)
+ ✓ Compiled in 3.3s (1373 modules)
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 800ms (1344 modules)
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 4s (1570 modules)
+ GET /bootcamp 404 in 5232ms
+ ⨯ Error: Cannot find module './787.js'
+Require stack:
+- /home/lumi/Documents/rubytech/.next/server/webpack-runtime.js
+- /home/lumi/Documents/rubytech/.next/server/pages/_document.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/require.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/build/utils.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/hot-middleware.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-server.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/start-server.js
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1500:15)
+    at /home/lumi/Documents/rubytech/node_modules/next/dist/server/require-hook.js:55:36
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/home/lumi/Documents/rubytech/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:153:16)
+    at __webpack_require__.f.require (/home/lumi/Documents/rubytech/.next/server/webpack-runtime.js:198:28)
+    at /home/lumi/Documents/rubytech/.next/server/webpack-runtime.js:111:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (/home/lumi/Documents/rubytech/.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (/home/lumi/Documents/rubytech/.next/server/webpack-runtime.js:162:22)
+    at /home/lumi/Documents/rubytech/.next/server/app/bootcamp/page.js:1:20802
+    at Object.<anonymous> (/home/lumi/Documents/rubytech/.next/server/app/bootcamp/page.js:1:20855)
+    at Module._compile (node:internal/modules/cjs/loader:1854:14)
+    at Object..js (node:internal/modules/cjs/loader:1985:10)
+    at Module.load (node:internal/modules/cjs/loader:1577:32)
+    at Module._load (node:internal/modules/cjs/loader:1379:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/home/lumi/Documents/rubytech/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:153:16)
+    at requirePage (/home/lumi/Documents/rubytech/node_modules/next/dist/server/require.js:109:84)
+    at /home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js:98:84
+    at async loadComponentsImpl (/home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js:98:26)
+    at async DevServer.findPageComponentsImpl (/home/lumi/Documents/rubytech/node_modules/next/dist/server/next-server.js:709:36)
+    at async DevServer.findPageComponents (/home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/next-dev-server.js:577:20)
+    at async DevServer.renderPageComponent (/home/lumi/Documents/rubytech/node_modules/next/dist/server/base-server.js:1894:24)
+    at async DevServer.renderToResponseImpl (/home/lumi/Documents/rubytech/node_modules/next/dist/server/base-server.js:1946:32)
+    at async DevServer.pipeImpl (/home/lumi/Documents/rubytech/node_modules/next/dist/server/base-server.js:921:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/home/lumi/Documents/rubytech/node_modules/next/dist/server/next-server.js:272:17)
+    at async DevServer.handleRequestImpl (/home/lumi/Documents/rubytech/node_modules/next/dist/server/base-server.js:817:17)
+    at async /home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/home/lumi/Documents/rubytech/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-server.js:173:21)
+    at async handleRequest (/home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-server.js:350:24)
+    at async requestHandlerImpl (/home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-server.js:374:13)
+    at async Server.requestListener (/home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/lumi/Documents/rubytech/.next/server/webpack-runtime.js',
+    '/home/lumi/Documents/rubytech/.next/server/pages/_document.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/require.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/build/utils.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/hot-middleware.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/hot-reloader-webpack.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-server.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/start-server.js'
+  ],
+  page: '/bootcamp'
+}
+ GET /bootcamp 500 in 217ms
+ ⨯ Error: Cannot find module './787.js'
+Require stack:
+- /home/lumi/Documents/rubytech/.next/server/webpack-runtime.js
+- /home/lumi/Documents/rubytech/.next/server/pages/_document.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/require.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/build/utils.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/hot-middleware.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-server.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/start-server.js
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1500:15)
+    at /home/lumi/Documents/rubytech/node_modules/next/dist/server/require-hook.js:55:36
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/home/lumi/Documents/rubytech/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:153:16)
+    at __webpack_require__.f.require (/home/lumi/Documents/rubytech/.next/server/webpack-runtime.js:198:28)
+    at /home/lumi/Documents/rubytech/.next/server/webpack-runtime.js:111:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (/home/lumi/Documents/rubytech/.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (/home/lumi/Documents/rubytech/.next/server/webpack-runtime.js:162:22)
+    at /home/lumi/Documents/rubytech/.next/server/app/page.js:1:30131
+    at Object.<anonymous> (/home/lumi/Documents/rubytech/.next/server/app/page.js:1:30183)
+    at Module._compile (node:internal/modules/cjs/loader:1854:14)
+    at Object..js (node:internal/modules/cjs/loader:1985:10)
+    at Module.load (node:internal/modules/cjs/loader:1577:32)
+    at Module._load (node:internal/modules/cjs/loader:1379:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/home/lumi/Documents/rubytech/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:153:16)
+    at requirePage (/home/lumi/Documents/rubytech/node_modules/next/dist/server/require.js:109:84)
+    at /home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js:98:84
+    at async loadComponentsImpl (/home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js:98:26)
+    at async DevServer.findPageComponentsImpl (/home/lumi/Documents/rubytech/node_modules/next/dist/server/next-server.js:709:36)
+    at async DevServer.findPageComponents (/home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/next-dev-server.js:577:20)
+    at async DevServer.renderPageComponent (/home/lumi/Documents/rubytech/node_modules/next/dist/server/base-server.js:1894:24)
+    at async DevServer.renderToResponseImpl (/home/lumi/Documents/rubytech/node_modules/next/dist/server/base-server.js:1946:32)
+    at async DevServer.pipeImpl (/home/lumi/Documents/rubytech/node_modules/next/dist/server/base-server.js:921:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/home/lumi/Documents/rubytech/node_modules/next/dist/server/next-server.js:272:17)
+    at async DevServer.handleRequestImpl (/home/lumi/Documents/rubytech/node_modules/next/dist/server/base-server.js:817:17)
+    at async /home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/home/lumi/Documents/rubytech/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-server.js:173:21)
+    at async handleRequest (/home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-server.js:350:24)
+    at async requestHandlerImpl (/home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-server.js:374:13)
+    at async Server.requestListener (/home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/lumi/Documents/rubytech/.next/server/webpack-runtime.js',
+    '/home/lumi/Documents/rubytech/.next/server/pages/_document.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/require.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/build/utils.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/hot-middleware.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/hot-reloader-webpack.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-server.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/start-server.js'
+  ],
+  page: '/'
+}
+ GET / 500 in 77ms
+ ○ Compiling /books ...
+ ✓ Compiled /books in 3s (1581 modules)
+ GET /books 200 in 3409ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⨯ Error: Cannot find module './787.js'
+Require stack:
+- /home/lumi/Documents/rubytech/.next/server/webpack-runtime.js
+- /home/lumi/Documents/rubytech/.next/server/app/books/page.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/require.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/build/utils.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/hot-middleware.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-server.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/start-server.js
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1500:15)
+    at /home/lumi/Documents/rubytech/node_modules/next/dist/server/require-hook.js:55:36
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/home/lumi/Documents/rubytech/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:153:16)
+    at __webpack_require__.f.require (/home/lumi/Documents/rubytech/.next/server/webpack-runtime.js:198:28)
+    at /home/lumi/Documents/rubytech/.next/server/webpack-runtime.js:111:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (/home/lumi/Documents/rubytech/.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (/home/lumi/Documents/rubytech/.next/server/webpack-runtime.js:162:22)
+    at /home/lumi/Documents/rubytech/.next/server/app/bootcamp/page.js:1:20802
+    at Object.<anonymous> (/home/lumi/Documents/rubytech/.next/server/app/bootcamp/page.js:1:20855)
+    at Module._compile (node:internal/modules/cjs/loader:1854:14)
+    at Object..js (node:internal/modules/cjs/loader:1985:10)
+    at Module.load (node:internal/modules/cjs/loader:1577:32)
+    at Module._load (node:internal/modules/cjs/loader:1379:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/home/lumi/Documents/rubytech/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:153:16)
+    at requirePage (/home/lumi/Documents/rubytech/node_modules/next/dist/server/require.js:109:84)
+    at /home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js:98:84
+    at async loadComponentsImpl (/home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js:98:26)
+    at async DevServer.findPageComponentsImpl (/home/lumi/Documents/rubytech/node_modules/next/dist/server/next-server.js:709:36)
+    at async DevServer.findPageComponents (/home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/next-dev-server.js:577:20)
+    at async DevServer.renderPageComponent (/home/lumi/Documents/rubytech/node_modules/next/dist/server/base-server.js:1894:24)
+    at async DevServer.renderToResponseImpl (/home/lumi/Documents/rubytech/node_modules/next/dist/server/base-server.js:1946:32)
+    at async DevServer.pipeImpl (/home/lumi/Documents/rubytech/node_modules/next/dist/server/base-server.js:921:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/home/lumi/Documents/rubytech/node_modules/next/dist/server/next-server.js:272:17)
+    at async DevServer.handleRequestImpl (/home/lumi/Documents/rubytech/node_modules/next/dist/server/base-server.js:817:17)
+    at async /home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/home/lumi/Documents/rubytech/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-server.js:173:21)
+    at async handleRequest (/home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-server.js:350:24)
+    at async requestHandlerImpl (/home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-server.js:374:13)
+    at async Server.requestListener (/home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/lumi/Documents/rubytech/.next/server/webpack-runtime.js',
+    '/home/lumi/Documents/rubytech/.next/server/app/books/page.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/require.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/build/utils.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/hot-middleware.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/hot-reloader-webpack.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-server.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/start-server.js'
+  ],
+  page: '/bootcamp'
+}
+ ⨯ Error: Cannot find module './161.js'
+Require stack:
+- /home/lumi/Documents/rubytech/.next/server/webpack-runtime.js
+- /home/lumi/Documents/rubytech/.next/server/app/books/page.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/require.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/build/utils.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/hot-middleware.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-server.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/start-server.js
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1500:15)
+    at /home/lumi/Documents/rubytech/node_modules/next/dist/server/require-hook.js:55:36
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/home/lumi/Documents/rubytech/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:153:16)
+    at __webpack_require__.f.require (/home/lumi/Documents/rubytech/.next/server/webpack-runtime.js:198:28)
+    at /home/lumi/Documents/rubytech/.next/server/webpack-runtime.js:111:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (/home/lumi/Documents/rubytech/.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (/home/lumi/Documents/rubytech/.next/server/webpack-runtime.js:162:22)
+    at /home/lumi/Documents/rubytech/.next/server/pages/_document.js:1:335
+    at Object.<anonymous> (/home/lumi/Documents/rubytech/.next/server/pages/_document.js:1:376)
+    at Module._compile (node:internal/modules/cjs/loader:1854:14)
+    at Object..js (node:internal/modules/cjs/loader:1985:10)
+    at Module.load (node:internal/modules/cjs/loader:1577:32)
+    at Module._load (node:internal/modules/cjs/loader:1379:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/home/lumi/Documents/rubytech/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:153:16)
+    at requirePage (/home/lumi/Documents/rubytech/node_modules/next/dist/server/require.js:109:84)
+    at /home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js:72:65
+    at async Promise.all (index 0)
+    at async loadComponentsImpl (/home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js:71:33)
+    at async DevServer.findPageComponentsImpl (/home/lumi/Documents/rubytech/node_modules/next/dist/server/next-server.js:709:36) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/lumi/Documents/rubytech/.next/server/webpack-runtime.js',
+    '/home/lumi/Documents/rubytech/.next/server/app/books/page.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/require.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/build/utils.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/hot-middleware.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/hot-reloader-webpack.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-server.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/start-server.js'
+  ]
+}
+ ⨯ Error: Cannot find module './787.js'
+Require stack:
+- /home/lumi/Documents/rubytech/.next/server/webpack-runtime.js
+- /home/lumi/Documents/rubytech/.next/server/app/books/page.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/require.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/build/utils.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/hot-middleware.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-server.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/start-server.js
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1500:15)
+    at /home/lumi/Documents/rubytech/node_modules/next/dist/server/require-hook.js:55:36
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/home/lumi/Documents/rubytech/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:153:16)
+    at __webpack_require__.f.require (/home/lumi/Documents/rubytech/.next/server/webpack-runtime.js:198:28)
+    at /home/lumi/Documents/rubytech/.next/server/webpack-runtime.js:111:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (/home/lumi/Documents/rubytech/.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (/home/lumi/Documents/rubytech/.next/server/webpack-runtime.js:162:22)
+    at /home/lumi/Documents/rubytech/.next/server/app/bootcamp/page.js:1:20802
+    at Object.<anonymous> (/home/lumi/Documents/rubytech/.next/server/app/bootcamp/page.js:1:20855)
+    at Module._compile (node:internal/modules/cjs/loader:1854:14)
+    at Object..js (node:internal/modules/cjs/loader:1985:10)
+    at Module.load (node:internal/modules/cjs/loader:1577:32)
+    at Module._load (node:internal/modules/cjs/loader:1379:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/home/lumi/Documents/rubytech/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:153:16)
+    at requirePage (/home/lumi/Documents/rubytech/node_modules/next/dist/server/require.js:109:84)
+    at /home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js:98:84
+    at async loadComponentsImpl (/home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js:98:26)
+    at async DevServer.findPageComponentsImpl (/home/lumi/Documents/rubytech/node_modules/next/dist/server/next-server.js:709:36)
+    at async DevServer.findPageComponents (/home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/next-dev-server.js:577:20)
+    at async DevServer.renderPageComponent (/home/lumi/Documents/rubytech/node_modules/next/dist/server/base-server.js:1894:24)
+    at async DevServer.renderToResponseImpl (/home/lumi/Documents/rubytech/node_modules/next/dist/server/base-server.js:1946:32)
+    at async DevServer.pipeImpl (/home/lumi/Documents/rubytech/node_modules/next/dist/server/base-server.js:921:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/home/lumi/Documents/rubytech/node_modules/next/dist/server/next-server.js:272:17)
+    at async DevServer.handleRequestImpl (/home/lumi/Documents/rubytech/node_modules/next/dist/server/base-server.js:817:17)
+    at async /home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/home/lumi/Documents/rubytech/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-server.js:173:21)
+    at async handleRequest (/home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-server.js:350:24)
+    at async requestHandlerImpl (/home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-server.js:374:13)
+    at async Server.requestListener (/home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/lumi/Documents/rubytech/.next/server/webpack-runtime.js',
+    '/home/lumi/Documents/rubytech/.next/server/app/books/page.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/require.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/build/utils.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/hot-middleware.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/hot-reloader-webpack.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-server.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/start-server.js'
+  ],
+  page: '/bootcamp'
+}
+ ⨯ Error: Cannot find module './161.js'
+Require stack:
+- /home/lumi/Documents/rubytech/.next/server/webpack-runtime.js
+- /home/lumi/Documents/rubytech/.next/server/app/books/page.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/require.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/build/utils.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/hot-middleware.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-server.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/start-server.js
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1500:15)
+    at /home/lumi/Documents/rubytech/node_modules/next/dist/server/require-hook.js:55:36
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/home/lumi/Documents/rubytech/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:153:16)
+    at __webpack_require__.f.require (/home/lumi/Documents/rubytech/.next/server/webpack-runtime.js:198:28)
+    at /home/lumi/Documents/rubytech/.next/server/webpack-runtime.js:111:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (/home/lumi/Documents/rubytech/.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (/home/lumi/Documents/rubytech/.next/server/webpack-runtime.js:162:22)
+    at /home/lumi/Documents/rubytech/.next/server/pages/_document.js:1:335
+    at Object.<anonymous> (/home/lumi/Documents/rubytech/.next/server/pages/_document.js:1:376)
+    at Module._compile (node:internal/modules/cjs/loader:1854:14)
+    at Object..js (node:internal/modules/cjs/loader:1985:10)
+    at Module.load (node:internal/modules/cjs/loader:1577:32)
+    at Module._load (node:internal/modules/cjs/loader:1379:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/home/lumi/Documents/rubytech/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:153:16)
+    at requirePage (/home/lumi/Documents/rubytech/node_modules/next/dist/server/require.js:109:84)
+    at /home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js:72:65
+    at async Promise.all (index 0)
+    at async loadComponentsImpl (/home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js:71:33)
+    at async DevServer.findPageComponentsImpl (/home/lumi/Documents/rubytech/node_modules/next/dist/server/next-server.js:709:36) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/lumi/Documents/rubytech/.next/server/webpack-runtime.js',
+    '/home/lumi/Documents/rubytech/.next/server/app/books/page.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/require.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/build/utils.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/hot-middleware.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/hot-reloader-webpack.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-server.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/start-server.js'
+  ]
+}
+ GET /bootcamp 500 in 4835ms
+ GET /bootcamp 500 in 5335ms
+ ○ Compiling /courses/[slug] ...
+ ✓ Compiled /courses/[slug] in 1776ms (1593 modules)
+ ⨯ Error: Cannot find module './vendor-chunks/@vercel.js'
+Require stack:
+- /home/lumi/Documents/rubytech/.next/server/webpack-runtime.js
+- /home/lumi/Documents/rubytech/.next/server/app/courses/[slug]/page.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/require.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/build/utils.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/static-paths-worker.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/jest-worker/processChild.js
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1500:15)
+    at /home/lumi/Documents/rubytech/node_modules/next/dist/server/require-hook.js:55:36
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/home/lumi/Documents/rubytech/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:153:16) {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/lumi/Documents/rubytech/.next/server/webpack-runtime.js',
+    '/home/lumi/Documents/rubytech/.next/server/app/courses/[slug]/page.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/require.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/build/utils.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/static-paths-worker.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/compiled/jest-worker/processChild.js'
+  ],
+  page: '/courses/website-development-bootcamp'
+}
+ ⨯ Error: Cannot find module './161.js'
+Require stack:
+- /home/lumi/Documents/rubytech/.next/server/webpack-runtime.js
+- /home/lumi/Documents/rubytech/.next/server/app/courses/[slug]/page.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/require.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/build/utils.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/hot-middleware.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-server.js
+- /home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/start-server.js
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1500:15)
+    at /home/lumi/Documents/rubytech/node_modules/next/dist/server/require-hook.js:55:36
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/home/lumi/Documents/rubytech/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:153:16)
+    at __webpack_require__.f.require (/home/lumi/Documents/rubytech/.next/server/webpack-runtime.js:198:28)
+    at /home/lumi/Documents/rubytech/.next/server/webpack-runtime.js:111:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (/home/lumi/Documents/rubytech/.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (/home/lumi/Documents/rubytech/.next/server/webpack-runtime.js:162:22)
+    at /home/lumi/Documents/rubytech/.next/server/pages/_document.js:1:335
+    at Object.<anonymous> (/home/lumi/Documents/rubytech/.next/server/pages/_document.js:1:376)
+    at Module._compile (node:internal/modules/cjs/loader:1854:14)
+    at Object..js (node:internal/modules/cjs/loader:1985:10)
+    at Module.load (node:internal/modules/cjs/loader:1577:32)
+    at Module._load (node:internal/modules/cjs/loader:1379:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/home/lumi/Documents/rubytech/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:153:16)
+    at requirePage (/home/lumi/Documents/rubytech/node_modules/next/dist/server/require.js:109:84)
+    at /home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js:72:65
+    at async Promise.all (index 0)
+    at async loadComponentsImpl (/home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js:71:33)
+    at async DevServer.findPageComponentsImpl (/home/lumi/Documents/rubytech/node_modules/next/dist/server/next-server.js:709:36) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/lumi/Documents/rubytech/.next/server/webpack-runtime.js',
+    '/home/lumi/Documents/rubytech/.next/server/app/courses/[slug]/page.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/require.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/build/utils.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/hot-middleware.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/hot-reloader-webpack.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/router-server.js',
+    '/home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/start-server.js'
+  ]
+}
+ GET /courses/website-development-bootcamp 500 in 2734ms
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat '/home/lumi/Documents/rubytech/.next/server/vendor-chunks/motion-utils.js'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/motion-utils' in /home/lumi/Documents/rubytech/.next/server for build dependencies doesn't lead to expected result '/home/lumi/Documents/rubytech/.next/server/vendor-chunks/motion-utils.js', but to 'Error: Can't resolve './vendor-chunks/motion-utils' in '/home/lumi/Documents/rubytech/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/motion-utils (expected /home/lumi/Documents/rubytech/.next/server/vendor-chunks/motion-utils.js)
+<w>  at file dependencies /home/lumi/Documents/rubytech/.next/server/webpack-runtime.js
+<w>  at file /home/lumi/Documents/rubytech/.next/server/webpack-runtime.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/.next/server/app/courses/[slug]/page.js
+<w>  at file /home/lumi/Documents/rubytech/.next/server/app/courses/[slug]/page.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/server/require.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/build/utils.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/loader-runner/LoaderRunner.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/loader-runner/LoaderRunner.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/webpack/bundle5.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/webpack/bundle5.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/webpack/webpack.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/webpack/webpack.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/plugins/define-env-plugin.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/plugins/define-env-plugin.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/build/swc/index.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/build/swc/index.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/motion-dom' in /home/lumi/Documents/rubytech/.next/server for build dependencies doesn't lead to expected result '/home/lumi/Documents/rubytech/.next/server/vendor-chunks/motion-dom.js', but to 'Error: Can't resolve './vendor-chunks/motion-dom' in '/home/lumi/Documents/rubytech/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/motion-dom (expected /home/lumi/Documents/rubytech/.next/server/vendor-chunks/motion-dom.js)
+<w>  at file dependencies /home/lumi/Documents/rubytech/.next/server/webpack-runtime.js
+<w>  at file /home/lumi/Documents/rubytech/.next/server/webpack-runtime.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/.next/server/app/courses/[slug]/page.js
+<w>  at file /home/lumi/Documents/rubytech/.next/server/app/courses/[slug]/page.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/server/require.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/build/utils.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/loader-runner/LoaderRunner.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/loader-runner/LoaderRunner.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/webpack/bundle5.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/webpack/bundle5.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/webpack/webpack.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/webpack/webpack.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/plugins/define-env-plugin.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/plugins/define-env-plugin.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/build/swc/index.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/build/swc/index.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/framer-motion' in /home/lumi/Documents/rubytech/.next/server for build dependencies doesn't lead to expected result '/home/lumi/Documents/rubytech/.next/server/vendor-chunks/framer-motion.js', but to 'Error: Can't resolve './vendor-chunks/framer-motion' in '/home/lumi/Documents/rubytech/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/framer-motion (expected /home/lumi/Documents/rubytech/.next/server/vendor-chunks/framer-motion.js)
+<w>  at file dependencies /home/lumi/Documents/rubytech/.next/server/webpack-runtime.js
+<w>  at file /home/lumi/Documents/rubytech/.next/server/webpack-runtime.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/.next/server/app/courses/[slug]/page.js
+<w>  at file /home/lumi/Documents/rubytech/.next/server/app/courses/[slug]/page.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/server/require.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/build/utils.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/loader-runner/LoaderRunner.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/loader-runner/LoaderRunner.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/webpack/bundle5.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/webpack/bundle5.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/webpack/webpack.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/webpack/webpack.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/plugins/define-env-plugin.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/plugins/define-env-plugin.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/build/swc/index.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/build/swc/index.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat '/home/lumi/Documents/rubytech/.next/server/vendor-chunks/motion-utils.js'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/motion-utils' in /home/lumi/Documents/rubytech/.next/server for build dependencies doesn't lead to expected result '/home/lumi/Documents/rubytech/.next/server/vendor-chunks/motion-utils.js', but to 'Error: Can't resolve './vendor-chunks/motion-utils' in '/home/lumi/Documents/rubytech/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/motion-utils (expected /home/lumi/Documents/rubytech/.next/server/vendor-chunks/motion-utils.js)
+<w>  at file dependencies /home/lumi/Documents/rubytech/.next/server/webpack-runtime.js
+<w>  at file /home/lumi/Documents/rubytech/.next/server/webpack-runtime.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/.next/server/pages/_app.js
+<w>  at file /home/lumi/Documents/rubytech/.next/server/pages/_app.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/server/require.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/static-paths-worker.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/static-paths-worker.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/jest-worker/index.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/jest-worker/index.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/squoosh/main.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/squoosh/main.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/server/image-optimizer.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/server/image-optimizer.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/loaders/next-image-loader/index.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/loaders/next-image-loader/index.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/loader-runner/LoaderRunner.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/loader-runner/LoaderRunner.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/webpack/bundle5.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/webpack/bundle5.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/webpack/webpack.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/webpack/webpack.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/plugins/define-env-plugin.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/plugins/define-env-plugin.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack-config.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack-config.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/build/handle-externals.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/build/handle-externals.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/motion-dom' in /home/lumi/Documents/rubytech/.next/server for build dependencies doesn't lead to expected result '/home/lumi/Documents/rubytech/.next/server/vendor-chunks/motion-dom.js', but to 'Error: Can't resolve './vendor-chunks/motion-dom' in '/home/lumi/Documents/rubytech/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/motion-dom (expected /home/lumi/Documents/rubytech/.next/server/vendor-chunks/motion-dom.js)
+<w>  at file dependencies /home/lumi/Documents/rubytech/.next/server/webpack-runtime.js
+<w>  at file /home/lumi/Documents/rubytech/.next/server/webpack-runtime.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/.next/server/pages/_app.js
+<w>  at file /home/lumi/Documents/rubytech/.next/server/pages/_app.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/server/require.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/static-paths-worker.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/static-paths-worker.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/jest-worker/index.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/jest-worker/index.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/squoosh/main.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/squoosh/main.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/server/image-optimizer.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/server/image-optimizer.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/loaders/next-image-loader/index.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/loaders/next-image-loader/index.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/loader-runner/LoaderRunner.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/loader-runner/LoaderRunner.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/webpack/bundle5.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/webpack/bundle5.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/webpack/webpack.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/webpack/webpack.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/plugins/define-env-plugin.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/plugins/define-env-plugin.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack-config.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack-config.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/build/handle-externals.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/build/handle-externals.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/framer-motion' in /home/lumi/Documents/rubytech/.next/server for build dependencies doesn't lead to expected result '/home/lumi/Documents/rubytech/.next/server/vendor-chunks/framer-motion.js', but to 'Error: Can't resolve './vendor-chunks/framer-motion' in '/home/lumi/Documents/rubytech/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/framer-motion (expected /home/lumi/Documents/rubytech/.next/server/vendor-chunks/framer-motion.js)
+<w>  at file dependencies /home/lumi/Documents/rubytech/.next/server/webpack-runtime.js
+<w>  at file /home/lumi/Documents/rubytech/.next/server/webpack-runtime.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/.next/server/pages/_app.js
+<w>  at file /home/lumi/Documents/rubytech/.next/server/pages/_app.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/server/require.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/static-paths-worker.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/server/dev/static-paths-worker.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/jest-worker/index.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/jest-worker/index.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/squoosh/main.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/server/lib/squoosh/main.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/server/image-optimizer.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/server/image-optimizer.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/loaders/next-image-loader/index.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/loaders/next-image-loader/index.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/loader-runner/LoaderRunner.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/loader-runner/LoaderRunner.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/webpack/bundle5.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/webpack/bundle5.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/webpack/webpack.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/compiled/webpack/webpack.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/plugins/define-env-plugin.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/plugins/define-env-plugin.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack-config.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack-config.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/build/handle-externals.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/build/handle-externals.js
+<w>  at file dependencies /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/lumi/Documents/rubytech/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+[Error: ENOENT: no such file or directory, stat '/home/lumi/Documents/rubytech/.next/cache/webpack/server-development/7.pack.gz'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'stat',
+  path: '/home/lumi/Documents/rubytech/.next/cache/webpack/server-development/7.pack.gz'
+}
+ ⨯ unhandledRejection: [Error: ENOENT: no such file or directory, stat '/home/lumi/Documents/rubytech/.next/cache/webpack/server-development/7.pack.gz'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'stat',
+  path: '/home/lumi/Documents/rubytech/.next/cache/webpack/server-development/7.pack.gz'
+}
+ ⨯ unhandledRejection: [Error: ENOENT: no such file or directory, stat '/home/lumi/Documents/rubytech/.next/cache/webpack/server-development/7.pack.gz'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'stat',
+  path: '/home/lumi/Documents/rubytech/.next/cache/webpack/server-development/7.pack.gz'
+}
+[Error: ENOENT: no such file or directory, stat '/home/lumi/Documents/rubytech/.next/cache/webpack/server-development/12.pack.gz'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'stat',
+  path: '/home/lumi/Documents/rubytech/.next/cache/webpack/server-development/12.pack.gz'
+}
+ ⨯ unhandledRejection: [Error: ENOENT: no such file or directory, stat '/home/lumi/Documents/rubytech/.next/cache/webpack/server-development/12.pack.gz'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'stat',
+  path: '/home/lumi/Documents/rubytech/.next/cache/webpack/server-development/12.pack.gz'
+}
+ ⨯ unhandledRejection: [Error: ENOENT: no such file or directory, stat '/home/lumi/Documents/rubytech/.next/cache/webpack/server-development/12.pack.gz'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'stat',
+  path: '/home/lumi/Documents/rubytech/.next/cache/webpack/server-development/12.pack.gz'
+}
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, stat '/home/lumi/Documents/rubytech/.next/cache/webpack/server-development/7.pack.gz'
+[Error: ENOENT: no such file or directory, stat '/home/lumi/Documents/rubytech/.next/cache/webpack/client-development/5.pack.gz'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'stat',
+  path: '/home/lumi/Documents/rubytech/.next/cache/webpack/client-development/5.pack.gz'
+}
+ ⨯ unhandledRejection: [Error: ENOENT: no such file or directory, stat '/home/lumi/Documents/rubytech/.next/cache/webpack/client-development/5.pack.gz'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'stat',
+  path: '/home/lumi/Documents/rubytech/.next/cache/webpack/client-development/5.pack.gz'
+}
+ ⨯ unhandledRejection: [Error: ENOENT: no such file or directory, stat '/home/lumi/Documents/rubytech/.next/cache/webpack/client-development/5.pack.gz'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'stat',
+  path: '/home/lumi/Documents/rubytech/.next/cache/webpack/client-development/5.pack.gz'
+}
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, stat '/home/lumi/Documents/rubytech/.next/cache/webpack/client-development/5.pack.gz'
+[?25h

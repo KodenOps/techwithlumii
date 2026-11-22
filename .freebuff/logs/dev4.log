@@ -1,0 +1,73 @@
+
+> techwithlumi@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.15
+  - Local:        http://localhost:3300
+
+ ✓ Starting...
+ ✓ Ready in 3.6s
+ ○ Compiling / ...
+ ✓ Compiled / in 10.2s (1335 modules)
+ GET / 200 in 10770ms
+ GET / 200 in 142ms
+ ○ Compiling /bootcamp ...
+ ✓ Compiled /bootcamp in 6.9s (1355 modules)
+ GET /bootcamp 200 in 7177ms
+ ✓ Compiled /books in 488ms (1355 modules)
+ GET /books 200 in 589ms
+ ○ Compiling /courses/[slug] ...
+ ✓ Compiled /courses/[slug] in 610ms (1367 modules)
+ GET /courses/website-development-bootcamp 200 in 1352ms
+ GET /courses/devops-beginner-bootcamp 200 in 90ms
+ GET /courses/excel-data-analysis-bootcamp 200 in 59ms
+ GET / 200 in 141ms
+ GET / 200 in 42ms
+ GET / 200 in 76ms
+ GET / 200 in 59ms
+ GET / 200 in 57ms
+ ✓ Compiled in 913ms (697 modules)
+ ✓ Compiled in 520ms (697 modules)
+ ✓ Compiled in 469ms (697 modules)
+ ⨯ src/app/layout.tsx
+Module not found: Can't resolve '../fonts/LibreFranklin-Variable.woff2'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./src/app/layout.tsx
+ ⨯ src/app/layout.tsx
+Module not found: Can't resolve '../fonts/LibreFranklin-Variable.woff2'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./src/app/layout.tsx
+ ○ Compiling /_error ...
+ ⨯ src/app/layout.tsx
+Module not found: Can't resolve '../fonts/LibreFranklin-Variable.woff2'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./node_modules/next/font/local/target.css?{"path":"src/app/layout.tsx","import":"","arguments":[{"src":"../fonts/LibreFranklin-Variable.woff2","weight":"400 700","variable":"--font-display","display":"swap"}],"variableName":"libreFranklin"}
+ GET / 500 in 52ms
+ ⨯ src/app/layout.tsx
+Module not found: Can't resolve '../fonts/LibreFranklin-Variable.woff2'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./node_modules/next/font/local/target.css?{"path":"src/app/layout.tsx","import":"","arguments":[{"src":"../fonts/LibreFranklin-Variable.woff2","weight":"400 700","variable":"--font-display","display":"swap"}],"variableName":"libreFranklin"}
+ ✓ Compiled /_not-found in 6.5s (1573 modules)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET / 200 in 395ms
+ GET /_next/static/webpack/8e10fc0fd5b58f39.webpack.hot-update.json 404 in 2279ms
+ GET / 200 in 94ms
+ ✓ Compiled in 978ms (1573 modules)
+ ✓ Compiled in 626ms (883 modules)
+ ✓ Compiled in 3.8s (1570 modules)
+ ✓ Compiled in 1509ms (881 modules)
+ ✓ Compiled in 1174ms (881 modules)
+ ✓ Compiled in 498ms (881 modules)
+[?25h
